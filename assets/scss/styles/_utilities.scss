@@ -1,0 +1,95 @@
+/** 03.1 Wide */
+[class*="wide"]{
+    max-width: 100%;
+}
+.wide{
+    &-md{
+        width: 540px;
+    }
+    &-lg{
+        width: 600px;
+    }
+}
+@media (min-width:992px){
+    .wide{
+        &-lg{
+            width: 730px;
+        }
+    }
+}
+
+/** 03.2 Backgrounds */
+.bg-accent{
+    background-color: $bg-accent !important;
+}
+.bg-accent-light{
+    background-color: $bg-accent-light !important;
+}
+.bg-accent-dark{
+    background-color: $bg-accent-dark !important;
+}
+.bg-dark{
+    background-color: $bg-dark !important;
+}
+.bg-light{
+    background-color: $bg-light !important;
+}
+/** 03.3 Guttters */
+.g-gs{
+    margin: -15px;
+    > div, > li{
+        padding: 15px;
+    }
+}
+.gy-m{
+    margin-top: -22.5px;
+    margin-bottom: -22.5px;
+    > div, > li{
+        padding-top: 22.5px;
+        padding-top: 22.5px;
+    }
+}
+@media (min-width:576px){
+    .gy-sm-m{
+        margin-top: -22.5px;
+        margin-bottom: -22.5px;
+        > div, > li{
+            padding-top: 22.5px;
+            padding-top: 22.5px;
+        }
+    }
+}
+/** 03.4 Overflow */
+.ov{
+    &-h{
+        overflow: hidden;
+    }
+}
+/** 03.5 Overlay */
+.has-overlay{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+$shapes: a,a-sm,b,c;
+@each $shape in $shapes {
+    .shape-#{$shape} {
+        background-image: url('../images/shape-#{$shape}.png');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+    }
+}
+
+/**03.6 Text Style*/
+
+.font{
+    &-base{
+        font-family: $base-font;
+    }
+}

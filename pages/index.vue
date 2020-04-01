@@ -1,36 +1,7 @@
 <template>
     <div class="nk-wrap">
         <header class="nk-header bg-light has-overlay" id="home">
-            <div class="overlay shape shape-a"></div><!-- Overlay Shape -->
-            <div class="nk-navbar is-light is-sticky" id="navbar">
-                <div class="container">
-                    <div class="nk-navbar-wrap">
-                        <div class="nk-navbar-logo logo">
-                            <a href="./" class="logo-link">
-                                <img class="logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="logo">
-                                <img class="logo-light" src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
-                            </a>
-                        </div><!-- .nk-navbar-logo -->
-                        <div class="nk-navbar-toggle d-lg-none">
-                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em class="icon-close icon ni ni-cross"></em></a>
-                        </div><!-- .nk-navbar-toggle -->
-                        <nav class="nk-navbar-menu" id="navbar-menu">
-                            <ul class="nk-menu">
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#home">Home</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#about">About Corona</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#symptoms">Symptoms</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#prevention">Prevention</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#treatment">Treatment</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#faq">FAQ</a></li>
-                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#news">News</a></li>
-                            </ul>
-                            <ul class="nk-menu-btns">
-                                <li class="nk-menu-item"><a href="#protect" class="btn btn-sm scrollto nav-link">Do &amp; Don’t</a></li>
-                            </ul>
-                        </nav><!-- .nk-navbar-menu -->
-                    </div><!-- .nk-navbar-wrap -->
-                </div><!-- .container -->
-            </div><!-- .nk-navbar -->
+            <Menu />
             <div class="nk-banner">
                 <div class="container">
                     <div class="row g-gs align-items-center justify-content-between">
@@ -1064,3 +1035,12 @@
     </div><!-- .nk-wrap -->
 </body>
 </template>
+
+<script>
+import Menu from '@/components/menu'
+export default {
+  components: {
+    Menu
+  }
+}
+</script>

@@ -9,7 +9,7 @@
                             <h5 class="subtitle">Manifesto</h5>
                             <h2 class="title">#StopCorona</h2>
                             <p> <strong>Todo esto es posible gracias a estas empresas y colaboradores. </strong></p>
-                            <img style="background-color: rgba(255, 255, 255, 0.2);" src="~/assets/images/partners/partners.png" alt="partners">
+                            <img style="background-color: #FFFFFF;" src="~/assets/images/partners/partners.png" alt="partners">
                             <p>Y todos los demás que luchan y apoyan nuestra causa, respetando el #QuedateEnCasa</p>
                         </div><!-- .text-block -->
                     </div><!-- .col -->

@@ -1,34 +1,23 @@
 <template>
-    <div class="nk-navbar is-light is-sticky" id="navbar">
-        <div class="container">
-            <div class="nk-navbar-wrap">
-                <div class="nk-navbar-logo logo">
+    <div>
+        <b-container class="pl-0 pr-0">
+            <b-navbar toggleable="lg" type="light">
+                <b-navbar-brand href="#">
                     <nuxt-link class="logo-link" to="/">
-                        <img src="images/logo-rescue.png" alt="Rescueapp logo" />
+                        <img style="width: 200px" src="~/assets/images/logo-rescueapp.png" alt="Rescueapp logo" />
                     </nuxt-link>
-                </div>
-                <div class="nk-navbar-toggle d-lg-none">
-                    <a href="#" class="toggle" data-menu-toggle="navbar-menu">
-                        <em class="icon-menu icon ni ni-menu"></em>
-                        <em class="icon-close icon ni ni-cross"></em>
-                    </a>
-                </div>
-                <nav class="nk-navbar-menu" id="navbar-menu">
-                    <ul class="nk-menu">
-                        <li class="nk-menu-item">
-                            <nuxt-link class="nav-link nk-menu-link" to="/">Home</nuxt-link>
-                        </li>
-                        <li class="nk-menu-item">
-                            <nuxt-link class="nav-link nk-menu-link" to="/">¿Quienes somos?</nuxt-link>
-                        </li>
-                    </ul>
-                    <ul class="nk-menu-btns">
-                        <li class="nk-menu-item">
-                            <nuxt-link class="btn btn-sm scrollto nav-link" to="/participar">Participar</nuxt-link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+                </b-navbar-brand>
+                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                <b-collapse id="nav-collapse" is-nav>
+                    <b-navbar-nav class="ml-auto">
+                        <b-nav-item to="/">Home</b-nav-item>
+                        <b-button class="d-none d-lg-block ml-lg-3" to="/participar">Participar</b-button>
+                        <b-nav-item class="d-lg-none" to="/participar">
+                            <span class="font-weight-bold text-success">Participar</span>
+                        </b-nav-item>
+                    </b-navbar-nav>
+                </b-collapse>
+            </b-navbar>
+        </b-container>
     </div>
 </template>

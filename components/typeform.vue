@@ -38,7 +38,6 @@ export default {
             buttonText: this.buttonText,
             onSubmit: this.onSubmit
         }
-        console.log(options)
         this.$typeform.makeWidget(this.$el, this.url, options)
     }
 }

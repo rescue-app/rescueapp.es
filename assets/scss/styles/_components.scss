@@ -1,6 +1,7 @@
 /** 05.1 Banner */
 .nk-banner{
-    padding:6.5rem 0 2rem;
+    background-color: #d4e1d3;
+    padding: 0;
     display: flex;
     > .container{
         display: flex;
@@ -59,7 +60,12 @@
 }
 @media (min-width:576px){
     .nk-banner{
-        min-height: 100vh;
+        min-height: 40vh;
+        margin-top: 2em;
+        &.small {
+            min-height: 20vh;
+        } 
+
         &-block{
             .content{
                 padding: 44px 0 30px;

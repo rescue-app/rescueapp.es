@@ -7,18 +7,8 @@
             <div class="section-head text-center wide-lg">
                 <h5 class="subtitle">Nuestros valores</h5>
                 <h2 class="title">
-                    Coordinación y <br class="d-sm-none" />
-                    acción onjunta
+                    Coordinación y <br class="d-sm-none" />acción conjunta
                 </h2>
-                <!-- <p>
-                    There is currently no vaccine to prevent coronavirus disease 2019
-                    (COVID-19).
-                    <strong>The best way to prevent illness is to avoid being exposed to this
-                        virus.</strong>
-                    Stay aware of the latest information on the COVID-19 outbreak,
-                    available on the WHO website and through your national and local
-                    public health authority.
-                </p> -->
             </div>
             <!-- .section-head -->
             <div class="section-content">
@@ -26,7 +16,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box3">
                             <div class="box3-gfx">
-                                <img src="images/gfx/advice-a.png" alt="" />
+                                <img src="~/assets/images/gfx/advice-a.png" alt="" />
                             </div>
                             <div class="box3-content">
                                 <h5 class="title">Solidaridad</h5>
@@ -41,7 +31,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box3">
                             <div class="box3-gfx">
-                                <img src="images/gfx/advice-b.png" alt="" />
+                                <img src="~/assets/images/gfx/advice-b.png" alt="" />
                             </div>
                             <div class="box3-content">
                                 <h5 class="title">Impacto</h5>
@@ -56,7 +46,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box3">
                             <div class="box3-gfx">
-                                <img src="images/gfx/advice-c.png" alt="" />
+                                <img src="~/assets/images/gfx/advice-c.png" alt="" />
                             </div>
                             <div class="box3-content">
                                 <h5 class="title">Eficacia</h5>
@@ -71,7 +61,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="box3">
                             <div class="box3-gfx">
-                                <img src="images/gfx/advice-d.png" alt="" />
+                                <img src="~/assets/images/gfx/advice-d.png" alt="" />
                             </div>
                             <div class="box3-content">
                                 <h5 class="title">Trabajo en equipo</h5>

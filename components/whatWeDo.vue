@@ -10,19 +10,16 @@
         </div>
         <InfographicSection />
         <ExamplesVideo />
-        <MapFrenaLaCurva />
     </section>
 </template>
 
 <script>
 import InfographicSection from '@/components/infographicSection'
 import ExamplesVideo from '@/components/examplesVideo'
-import MapFrenaLaCurva from '@/components/mapFrenaLaCurva'
 export default {
     components: {
         InfographicSection,
-        ExamplesVideo,
-        MapFrenaLaCurva
+        ExamplesVideo
     }
 }
 </script>

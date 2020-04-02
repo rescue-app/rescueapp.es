@@ -20,6 +20,7 @@ module.exports = {
         'indent': ["error", 4],
         'vue/html-self-closing': 'off',
         'vue/multiline-html-element-content-newline': 'off',
-        'vue/attributes-order': 'off'
+        'vue/attributes-order': 'off',
+        'vue/max-attributes-per-line': 'off'
     },
 }

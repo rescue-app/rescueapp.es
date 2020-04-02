@@ -5,7 +5,7 @@
                 <b-col md="6">
                     <div class="nk-banner-block">
                         <div class="content">
-                            <h1>Rescue App</h1>
+                            <h1>Rescue app</h1>
                             <h2>Tu red de ayudas</h2>
                             <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios para la lucha contra el COVID-19</p>
 

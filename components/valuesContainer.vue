@@ -1,6 +1,6 @@
 <template>
     <section
-        class="section section-l bg-light section-advice pb-0 pt-0 ov-h"
+        class="section section-l bg-light section-advice pb-4 pt-0 ov-h"
         id="valores"
     >
         <div class="container">
@@ -85,7 +85,7 @@
                     <!-- .col -->
                 </div>
                 <!-- .row -->
-                <ul class="section-actions">
+                <!-- <ul class="section-actions">
                     <li>
                         <a
                             href="#handwash"
@@ -98,7 +98,7 @@
                             class="btn btn-transparent scrollto"
                         ><span>Contactar</span><em class="icon ni ni-arrow-long-right"></em></a>
                     </li>
-                </ul>
+                </ul> -->
                 <!-- .section-actions -->
             </div>
             <!-- .section-content -->

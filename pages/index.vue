@@ -480,22 +480,22 @@
                             <div class="col-lg-4">
                                 <ul class="nav nav-tabs nav-tabs-vr nav-tabs-btns">
                                     <li class="nav-item">
-                                      <a class="nav-link active" data-toggle="tab" href="#covid-basics">Coronavirus Disease 2019 Basics</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#covid-basics">Coronavirus Disease 2019 Basics</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" data-toggle="tab" href="#covid-spreads">How It Spreads</a>
+                                        <a class="nav-link" data-toggle="tab" href="#covid-spreads">How It Spreads</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" data-toggle="tab" href="#covid-protect">How to Protect Yourself</a>
+                                        <a class="nav-link" data-toggle="tab" href="#covid-protect">How to Protect Yourself</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" data-toggle="tab" href="#covid-symptoms">Symptoms &amp; Testing</a>
+                                        <a class="nav-link" data-toggle="tab" href="#covid-symptoms">Symptoms &amp; Testing</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" data-toggle="tab" href="#covid-outbreak">Outbreak in Your Community</a>
+                                        <a class="nav-link" data-toggle="tab" href="#covid-outbreak">Outbreak in Your Community</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" data-toggle="tab" href="#covid-myth">Myth-Busters of coronavirus</a>
+                                        <a class="nav-link" data-toggle="tab" href="#covid-myth">Myth-Busters of coronavirus</a>
                                     </li>
                                 </ul><!-- .nav-tabs -->
                             </div><!-- .col -->
@@ -625,13 +625,13 @@
                                                                 <br><strong>Why?</strong> Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick.</li>
 
                                                             <li>Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.
-                                                            <br><strong>Why?</strong> Droplets spread virus. By following good respiratory hygiene you protect the people around you from viruses such as cold, flu and COVID-19.</li>
+                                                                <br><strong>Why?</strong> Droplets spread virus. By following good respiratory hygiene you protect the people around you from viruses such as cold, flu and COVID-19.</li>
 
                                                             <li>Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority.
-                                                            <br><strong>Why?</strong> National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections.</li>
+                                                                <br><strong>Why?</strong> National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections.</li>
 
                                                             <li>Keep up to date on the latest COVID-19 hotspots (cities or local areas where COVID-19 is spreading widely). If possible, avoid traveling to places  – especially if you are an older person or have diabetes, heart or lung disease.
-                                                            <br><strong>Why?</strong> You have a higher chance of catching COVID-19 in one of these areas.</li>
+                                                                <br><strong>Why?</strong> You have a higher chance of catching COVID-19 in one of these areas.</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1033,14 +1033,14 @@
             </section><!-- .section -->
         </footer><!-- .nk-footer -->
     </div><!-- .nk-wrap -->
-</body>
+    </body>
 </template>
 
 <script>
 import Menu from '@/components/menu'
 export default {
-  components: {
-    Menu
-  }
+    components: {
+        Menu
+    }
 }
 </script>

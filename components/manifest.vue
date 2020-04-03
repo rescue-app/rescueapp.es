@@ -9,7 +9,7 @@
                             <h5 class="subtitle">Manifesto</h5>
                             <h2 class="title">#StopCorona</h2>
                             <p> <strong>Todo esto es posible gracias a estas empresas y colaboradores. </strong></p>
-                            <img style="background-color: #FFFFFF;" src="~/assets/images/partners/partners.png" alt="partners">
+                            <PartnerLogoContainer style="background-color: #FFFFFF;" />
                             <p>Y todos los demás que luchan y apoyan nuestra causa, respetando el #QuedateEnCasa</p>
                         </div><!-- .text-block -->
                     </div><!-- .col -->
@@ -33,3 +33,13 @@
         </div><!-- .container -->
     </section><!-- .section -->
 </template>
+
+<script>
+import PartnerLogoContainer from '@/components/partnerLogoContainer'
+
+export default {
+    components: {
+        PartnerLogoContainer
+    }
+}
+</script>

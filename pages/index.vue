@@ -3,6 +3,7 @@
         <MainHero />
         <WhatWeDo />
         <ValuesContainer />
+        <MapFrenaLaCurva />
         <Manifest />
         <Contact />
     </div>
@@ -12,6 +13,7 @@
 import MainHero from '@/components/mainHero'
 import WhatWeDo from '@/components/whatWeDo'
 import ValuesContainer from '@/components/valuesContainer'
+import MapFrenaLaCurva from '@/components/mapFrenaLaCurva'
 import Manifest from '@/components/manifest'
 import Contact from '@/components/contact'
 export default {
@@ -19,6 +21,7 @@ export default {
         MainHero,
         WhatWeDo,
         ValuesContainer,
+        MapFrenaLaCurva,
         Manifest,
         Contact
     }

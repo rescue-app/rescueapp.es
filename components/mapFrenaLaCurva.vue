@@ -8,7 +8,7 @@
             <div v-if="interaction">
                 <iframe width="100%" height="600" src="https://es.mapa.frenalacurva.net/views/map" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div v-if="!interaction">
+            <div v-if="!interaction" style="cursor: pointer;">
                 <img class="img-fluid d-none d-lg-block" src="~/assets/images/frena-la-curva-iframe.jpg" @click="enableInteraction" />
                 <img class="img-fluid d-lg-none" src="~/assets/images/frena-la-curva-iframe-mobile.jpg" @click="enableInteraction" />
             </div>

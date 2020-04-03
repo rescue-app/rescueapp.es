@@ -6,8 +6,8 @@
                 <div class="row g-gs gy-sm-m justify-content-between align-items-center">
                     <div class="col-lg-7 col-xl-6">
                         <div class="text-block">
-                            <h5 class="subtitle">Manifesto</h5>
-                            <h2 class="title">#StopCorona</h2>
+                            <h5 class="subtitle">Equipo</h5>
+                            <h2 class="title">#yosumo</h2>
                             <p> <strong>Todo esto es posible gracias a estas empresas y colaboradores. </strong></p>
                             <PartnerLogoContainer style="background-color: #FFFFFF;" />
                             <p>Y todos los demás que luchan y apoyan nuestra causa, respetando el #QuedateEnCasa</p>
@@ -26,12 +26,12 @@
                                 <li>Hemos construido nuestras startups aprendiendo de los otros.</li>
                                 <li>Internet es nuestro universo y tenemos que hacernos oír.</li>
                             </ul>
-                        </div><!-- .box5 -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .section-content -->
-        </div><!-- .container -->
-    </section><!-- .section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>

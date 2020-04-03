@@ -9,9 +9,9 @@
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav class="ml-auto">
                         <b-nav-item to="/#mainHero" @click="scrollTo('#mainHero')">Home</b-nav-item>
-                        <b-nav-item to="/#queHacemos" @click="scrollTo('#queHacemos')">Qué hacemos?</b-nav-item>
+                        <b-nav-item to="/#queHacemos" @click="scrollTo('#queHacemos')">¿Qué hacemos?</b-nav-item>
                         <b-nav-item to="/#valores" @click="scrollTo('#valores')">Valores</b-nav-item>
-                        <b-nav-item to="/#quienesSomos" @click="scrollTo('#quienesSomos')">Quienes somos?</b-nav-item>
+                        <b-nav-item to="/#quienesSomos" @click="scrollTo('#quienesSomos')">¿Quienes somos?</b-nav-item>
                         <b-nav-item to="/#contacto" @click="scrollTo('#contacto')">Contacto</b-nav-item>
                         <b-button class="d-none d-lg-block ml-lg-3" to="/participar" @click="removeActiveClass">Participar</b-button>
                         <b-nav-item class="d-lg-none" to="/participar" @click="removeActiveClass">

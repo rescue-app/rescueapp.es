@@ -7,7 +7,7 @@ export default ({ app }) => {
         id: 'UA-162736581-1',
         disabled: !enabled,
         debug: {
-            enabled: true,
+            enabled: false,
             trace: true,
             sendHitTask: true
         }

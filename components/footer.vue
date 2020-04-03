@@ -13,6 +13,7 @@
                                 <li><a href="mailto:info@rescueapp.es"><em class="icon ni ni-mail-fill"></em></a></li>
                                 <li><a href="https://www.instagram.com/rescue_app/"><em class="icon ni ni-instagram"></em></a></li>
                                 <li><a href="https://www.linkedin.com/company/rescue-app/"><em class="icon ni ni-linkedin"></em></a></li>
+                                <li><a href="https://www.twitter.com/rescueapp_es"><em class="icon ni ni-twitter"></em></a></li>
                             </ul>
                         </div>
                     </div>
@@ -20,7 +21,11 @@
                 <div class="nk-footer-bottom">
                     <div class="row align-items-center">
                         <div class="col">
-                            <p class="nk-copyright">&copy; 2020 rescueapp.es&nbsp;|&nbsp;<nuxt-link to="/aviso-legal">Aviso Legal</nuxt-link></p>
+                            <p class="nk-copyright">
+                                &copy; 2020 rescueapp.es
+                                &nbsp;|&nbsp;<nuxt-link to="/aviso-legal">Aviso Legal</nuxt-link>
+                                &nbsp;|&nbsp;<nuxt-link to="/politica-de-cookies">Política de cookies</nuxt-link>
+                            </p>
                         </div>
                     </div>
                 </div>

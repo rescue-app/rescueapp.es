@@ -7,7 +7,7 @@
             </div>
             <div class="section-content">
                 <div class="row g-gs justify-content-center">
-                    <div class="col-md-9 col-lg-4">
+                    <div class="col-md-9 col-lg-3">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="mailto:info@rescueapp.es">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-lg-4">
+                    <div class="col-md-9 col-lg-3">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="https://www.instagram.com/rescue_app/">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-lg-4">
+                    <div class="col-md-9 col-lg-3">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="https://www.linkedin.com/company/rescue-app/">
@@ -43,6 +43,19 @@
                             <div class="blog-text">
                                 <h5 class="title"><a href="https://www.linkedin.com/company/rescue-app/">LinkedIn</a></h5>
                                 <p>Síguenos para ver qué novedades y planes tenemos!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-3">
+                        <div class="blog-item">
+                            <div class="text-center pt-4">
+                                <a href="https://www.twitter.com/rescueapp_es">
+                                    <img width="100px" height="100px" src="~/assets/images/social-badges/twitter.png" alt="">
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h5 class="title"><a href="https://www.twitter.com/rescueapp_es">Twitter</a></h5>
+                                <p>Síguenos para ver lo que se comenta sobre Rescueapp!</p>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <template>
-    <section class="section section-l bg-light section-blog" id="news">
+    <section class="section section-l bg-light section-blog" id="contacto">
         <div class="container">
             <div class="section-head text-center wide-lg">
                 <h5 class="subtitle">Contacto</h5>

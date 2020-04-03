@@ -1,5 +1,5 @@
 <template>
-    <div class="nk-banner">
+    <div class="nk-banner" id="mainHero">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <b-col md="6">

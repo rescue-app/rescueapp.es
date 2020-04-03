@@ -1,5 +1,5 @@
 <template>
-    <section class="section section-l bg-accent-light tc-light section-treatment has-overlay mt-3" id="treatment">
+    <section class="section section-l bg-accent-light tc-light section-treatment has-overlay mt-3" id="quienesSomos">
         <div class="overlay shape shape-b"></div><!-- Overlay Shape -->
         <div class="container">
             <div class="section-content">

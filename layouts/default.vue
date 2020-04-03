@@ -3,6 +3,7 @@
         <Menu />
         <nuxt />
         <Footer />
+        <CookieControl locale="es" />
     </div>
 </template>
 

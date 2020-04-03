@@ -20,7 +20,11 @@
                 <div class="nk-footer-bottom">
                     <div class="row align-items-center">
                         <div class="col">
-                            <p class="nk-copyright">&copy; 2020 rescueapp.es&nbsp;|&nbsp;<nuxt-link to="/aviso-legal">Aviso Legal</nuxt-link></p>
+                            <p class="nk-copyright">
+                                &copy; 2020 rescueapp.es
+                                &nbsp;|&nbsp;<nuxt-link to="/aviso-legal">Aviso Legal</nuxt-link>
+                                &nbsp;|&nbsp;<nuxt-link to="/politica-de-cookies">Política de cookies</nuxt-link>
+                            </p>
                         </div>
                     </div>
                 </div>

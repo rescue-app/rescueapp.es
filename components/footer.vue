@@ -1,5 +1,5 @@
 <template>
-    <footer class="nk-footer bg-dark tc-light has-overlay">
+    <footer class="nk-footer bg-dark tc-light has-overlay mt-4">
         <div class="overlay shape shape-c"></div>
         <section class="section section-footer pt-4 pb-4 tc-light">
             <div class="container">
@@ -20,7 +20,7 @@
                 <div class="nk-footer-bottom">
                     <div class="row align-items-center">
                         <div class="col">
-                            <p class="nk-copyright">&copy; 2020 rescueapp.es</p>
+                            <p class="nk-copyright">&copy; 2020 rescueapp.es&nbsp;|&nbsp;<nuxt-link to="/aviso-legal">Aviso Legal</nuxt-link></p>
                         </div>
                     </div>
                 </div>

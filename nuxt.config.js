@@ -22,11 +22,6 @@ module.exports = {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
-    env: {
-        linkedin: 'https://www.linkedin.com/company/rescue-app/',
-        instagram: 'https://www.instagram.com/rescue_app/',
-        email: 'http://info@rescueapp.es/'
-    },
     /*
     ** Customize the progress-bar color
     */

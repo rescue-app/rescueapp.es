@@ -13,6 +13,7 @@
                                 <li><a href="mailto:info@rescueapp.es"><em class="icon ni ni-mail-fill"></em></a></li>
                                 <li><a href="https://www.instagram.com/rescue_app/"><em class="icon ni ni-instagram"></em></a></li>
                                 <li><a href="https://www.linkedin.com/company/rescue-app/"><em class="icon ni ni-linkedin"></em></a></li>
+                                <li><a href="https://www.twitter.com/rescueapp_es"><em class="icon ni ni-twitter"></em></a></li>
                             </ul>
                         </div>
                     </div>

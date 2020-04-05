@@ -2,7 +2,9 @@
     <div>
         <b-row v-for="(chunk, index) in team" :key="index">
             <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center justify-content-center">
-                <img :src="require(`@/assets/images/team/${logo}`)" class="img-responsive p-1">
+                <a :href="logo.website" target="_blank">
+                    <img :src="require(`@/assets/images/team/${logo.filename}`)" :alt="logo.name" :title="logo.name" class="img-responsive p-1">
+                </a>
             </b-col>
         </b-row>
         <b-row>
@@ -13,7 +15,9 @@
         </b-row>
         <b-row v-for="(chunk, index) in partners" :key="index">
             <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center">
-                <img :src="require(`@/assets/images/partners/${logo}`)" class="img-responsive p-1">
+                <a :href="logo.website" target="_blank">
+                    <img :src="require(`@/assets/images/partners/${logo.filename}`)" :alt="logo.name" :title="logo.name" class="img-responsive p-1">
+                </a>
             </b-col>
         </b-row>
     </div>
@@ -37,7 +41,13 @@ export default {
         getImages (resource, maxPerRow) {
             const images = []
             resource.keys().forEach((key) => {
-                images.push(key.substring(2))
+                const parts = key.substring(2, key.length - 4).split('|')
+                images.push({
+                    filename: key.substring(2),
+                    position: parts[0],
+                    name: parts[1],
+                    website: (parts.length === 3) ? `https://${parts[2]}` : 'javascript:void(0)'
+                })
             })
             return this.chunkArray(images, maxPerRow)
         },

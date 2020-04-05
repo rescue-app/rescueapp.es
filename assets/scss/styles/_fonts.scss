@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "KeepCalm-Medium";
+    src: url("../fonts/keep-calm/KeepCalm-Medium.eot");
+    src: url("../fonts/keep-calm/KeepCalm-Medium.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/keep-calm/KeepCalm-Medium.otf") format("opentype"),
+      url("../fonts/keep-calm/KeepCalm-Medium.svg") format("svg"),
+      url("../fonts/keep-calm/KeepCalm-Medium.ttf") format("truetype"),
+      url("../fonts/keep-calm/KeepCalm-Medium.woff") format("woff"),
+      url("../fonts/keep-calm/KeepCalm-Medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
+@font-face {
+    font-family: "Keep Calm W01 Light";
+    src: url("../fonts/keep-calm-light/Keep-Calm-W01-Light.eot");
+    src: url("../fonts/keep-calm-light/Keep-Calm-W01-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/keep-calm-light/Keep-Calm-W01-Light.woff2") format("woff2"),
+    url("../fonts/keep-calm-light/Keep-Calm-W01-Light.woff") format("woff"),
+    url("../fonts/keep-calm-light/Keep-Calm-W01-Light.ttf") format("truetype"),
+    url("../fonts/keep-calm-light/Keep-Calm-W01-Light.svg#Keep Calm W01 Light") format("svg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Bold.eot');
@@ -45,3 +73,5 @@
     font-weight: bold;
     font-style: normal;
 }
+
+**/

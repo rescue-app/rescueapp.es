@@ -44,8 +44,7 @@
 @import "variables";
 @import "mixins";
 /** 01. Fonts */
-// @import "styles/fonts";
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import "styles/fonts";
 
 /** 02. Reset */
 @import "styles/resets";

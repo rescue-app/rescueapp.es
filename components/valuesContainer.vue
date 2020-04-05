@@ -1,8 +1,5 @@
 <template>
-    <section
-        class="section section-l bg-light section-advice pb-4 pt-0 ov-h"
-        id="valores"
-    >
+    <section class="section section-l bg-light section-advice pb-4 pt-4 ov-h" id="valores">
         <div class="container">
             <div class="section-head text-center wide-lg">
                 <h5 class="subtitle">Nuestros valores</h5>

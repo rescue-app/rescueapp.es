@@ -1,15 +1,24 @@
 <template>
     <div>
-        <ul>
-            <li v-for="(logo, index) in images" :key="index">
-                <img :src="require(`@/assets/images/partners/${logo.name}`)" alt="">
-            </li>
-            <!--  Adding an empty <li> here so the final photo doesn't stretch like crazy. Try removing it and see what happens!  -->
-            <li></li>
-        </ul>
-        <div>
-            <img src="@/assets/images/collaborators/porpouri.png" alt="">
-        </div>
+        <b-col sm="12">
+            <img :src="require(`@/assets/images/samaipata.png`)" class="img-responsive">
+        </b-col>
+        <b-row v-for="(chunk, index) in team" :key="index">
+            <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center justify-content-center">
+                <img :src="require(`@/assets/images/team/${logo}`)" class="img-responsive p-1">
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <hr />
+                <h6 class="text-center">Partners</h6>
+            </b-col>
+        </b-row>
+        <b-row v-for="(chunk, index) in partners" :key="index">
+            <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center">
+                <img :src="require(`@/assets/images/partners/${logo}`)" class="img-responsive p-1">
+            </b-col>
+        </b-row>
     </div>
 </template>
 
@@ -17,30 +26,31 @@
 export default {
     data () {
         return {
-            images: []
+            team: [],
+            partners: []
         }
     },
 
     mounted () {
-        this.importAll(require.context('~/assets/images/partners/', true))
+        this.team = this.getImages(require.context('~/assets/images/team/', true), 4)
+        this.partners = this.getImages(require.context('~/assets/images/partners/', true), 6)
     },
 
     methods: {
-        importAll (r) {
-            r.keys().forEach(key => (this.images.push({ name: key.substring(2) })))
+        getImages (resource, maxPerRow) {
+            const images = []
+            resource.keys().forEach((key) => {
+                images.push(key.substring(2))
+            })
+            return this.chunkArray(images, maxPerRow)
+        },
+        chunkArray (originalArray, chunkSize) {
+            const results = []
+            while (originalArray.length) {
+                results.push(originalArray.splice(0, chunkSize))
+            }
+            return results
         }
     }
 }
 </script>
-
-<style scoped>
-ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-}
-li {
-    max-width: 7em;
-}
-</style>

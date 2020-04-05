@@ -10,7 +10,7 @@
                             <h2 class="title">#yosumo</h2>
                             <p> <strong>Todo esto es posible gracias a estas empresas y colaboradores. </strong></p>
                             <PartnerLogoContainer style="background-color: #FFFFFF;" />
-                            <p>Y todos los demás que luchan y apoyan nuestra causa, respetando el #QuedateEnCasa</p>
+                            <p>Y todos los demás que luchan y apoyan nuestra causa, respetando #QuedateEnCasa</p>
                         </div><!-- .text-block -->
                     </div><!-- .col -->
                     <div class="col-lg-5">

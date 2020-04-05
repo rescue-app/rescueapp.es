@@ -16,6 +16,7 @@
                                 :hide-headers="true"
                                 :hide-footer="true"
                                 :opacity="0"
+                                :on-submit="onSubmit"
                                 url="https://info548263.typeform.com/to/W2VwqF"
                             />
                         </div>
@@ -34,6 +35,16 @@ export default {
     components: {
         SmallHero,
         Typeform
+    },
+    methods: {
+        onSubmit () {
+            this.$ga.event({
+                eventCategory: 'Forms',
+                eventAction: 'Send Take Part Form',
+                eventLabel: 'takePart',
+                eventValue: 1
+            })
+        }
     }
 }
 </script>

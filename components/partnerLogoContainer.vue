@@ -1,8 +1,5 @@
 <template>
     <div>
-        <b-col sm="12">
-            <img :src="require(`@/assets/images/samaipata.png`)" class="img-responsive">
-        </b-col>
         <b-row v-for="(chunk, index) in team" :key="index">
             <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center justify-content-center">
                 <img :src="require(`@/assets/images/team/${logo}`)" class="img-responsive p-1">

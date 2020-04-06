@@ -5,8 +5,9 @@
                 <h4 class="title">¿Dónde? <br class="d-sm-none"> Toda España</h4>
                 <a href="https://frenalacurva.net/" class="btn btn-sm btn-transparent scrollto"><span>Con la colaboración de FrenaLaCurva</span><em class="icon ni ni-arrow-long-right"></em></a>
             </div>
-            <div v-if="interaction">
+            <div v-if="interaction" class="m-auto" style="position:relative; max-width:1020px;">
                 <iframe width="100%" height="600" src="https://es.mapa.frenalacurva.net/views/map" frameborder="0" allowfullscreen></iframe>
+                <img class="frame-overlay" src="~/assets/images/logo-rescueapp.png">
             </div>
             <div v-if="!interaction" style="cursor: pointer;">
                 <img class="img-fluid d-none d-lg-block" src="~/assets/images/frena-la-curva-iframe.jpg" @click="enableInteraction" />
@@ -31,3 +32,16 @@ export default {
 
 }
 </script>
+
+<style scoped>
+.frame-overlay {
+    border-top-left-radius:18px;
+    border-bottom-left-radius:18px;
+    padding:.6em; background-color:#fff7ed;
+    height:59px;
+    top:529px;
+    right:0px;
+    position:absolute;
+    z-index:9
+}
+</style>

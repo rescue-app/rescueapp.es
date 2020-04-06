@@ -1,8 +1,8 @@
 <template>
     <div>
         <b-container class="pl-0 pr-0">
-            <b-navbar toggleable="lg" fixed="top" class="bg-white pl-5 pr-5" v-b-scrollspy="20">
-                <b-navbar-brand to="/">
+            <b-navbar toggleable="lg" fixed="top" class="bg-white pl-md-5 pr-md-5" v-b-scrollspy="20">
+                <b-navbar-brand to="/" class="m-0">
                     <img style="width: 200px" src="~/assets/images/logo-rescueapp.png" alt="Rescueapp logo" />
                 </b-navbar-brand>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

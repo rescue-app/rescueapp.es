@@ -14,8 +14,11 @@
                         </div>
                     </div>
                 </b-col>
-                <b-col md="4" class="d-none d-md-block">
-                    <div class="d-none d-md-block w-100"><img src="~/assets/images/tu-red-de-ayudas.jpg" alt="" /></div>
+                <b-col md="4" class="d-none d-md-block" style="overflow:hidden;">
+                    <video class="d-none d-md-block w-100" style="margin-bottom:-1px" autoplay muted loop>
+                        <source src="~/assets/videos/rescueapp-header-video.mp4" type="video/mp4">
+                    </video>
+                    <!-- <div class="d-none d-md-block w-100"><img src="~/assets/videos/rescue-app-header-animation.gif" alt="" /></div> -->
                     <div class="d-md-none d-flex justify-content-center"><img class="h-50 w-50" src="~/assets/images/tu-red-de-ayudas.jpg" alt="" /></div>
                 </b-col>
             </div>

@@ -28,13 +28,11 @@
 </template>
 
 <script>
-import Typeform from '@/components/typeform'
 import SmallHero from '@/components/smallHero'
 
 export default {
     components: {
-        SmallHero,
-        Typeform
+        SmallHero
     },
     methods: {
         onSubmit () {

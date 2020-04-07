@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
     "nuxt-cookie-control": "^1.8.0",
+    "nuxt-typeform": "0.0.1",
     "vue-analytics": "^5.22.1"
   },
   "devDependencies": {

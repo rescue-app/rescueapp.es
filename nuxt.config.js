@@ -36,7 +36,6 @@ module.exports = {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        { src: '~/plugins/typeform.js', mode: 'client' },
         { src: '~plugins/ga.js', mode: 'client' }
     ],
     /*
@@ -52,6 +51,7 @@ module.exports = {
     modules: [
         'bootstrap-vue/nuxt',
         '@nuxtjs/pwa',
+        'nuxt-typeform',
         ['nuxt-cookie-control', {
             controlButton: false,
             colors: {

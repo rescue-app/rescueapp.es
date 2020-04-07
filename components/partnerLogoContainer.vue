@@ -1,7 +1,7 @@
 <template>
     <div>
-        <b-row v-for="(chunk, index) in team" :key="index">
-            <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center justify-content-center">
+        <b-row v-for="(chunk, index) in team" :key="`logosChunkTeam${index}`">
+            <b-col v-for="(logo) in chunk" :key="logo.filename" class="d-flex align-items-center justify-content-center">
                 <a :href="logo.website" target="_blank">
                     <img :src="require(`@/assets/images/team/${logo.filename}`)" :alt="logo.name" :title="logo.name" class="img-responsive p-1">
                 </a>
@@ -13,8 +13,8 @@
                 <h6 class="text-center">Partners</h6>
             </b-col>
         </b-row>
-        <b-row v-for="(chunk, index) in partners" :key="index">
-            <b-col v-for="(logo) in chunk" :key="logo" class="d-flex align-items-center">
+        <b-row v-for="(chunk, index) in partners" :key="`logosChunkPartners${index}`">>
+            <b-col v-for="(logo) in chunk" :key="logo.filename" class="d-flex align-items-center">
                 <a :href="logo.website" target="_blank">
                     <img :src="require(`@/assets/images/partners/${logo.filename}`)" :alt="logo.name" :title="logo.name" class="img-responsive p-1">
                 </a>

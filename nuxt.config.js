@@ -79,7 +79,7 @@ module.exports = {
         */
         extend (config, ctx) {
         },
-        parallel: true,
+        parallel: false,
         hardSource: true,
         cache: true
     },

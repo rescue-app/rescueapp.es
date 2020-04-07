@@ -1,7 +1,7 @@
 <template>
     <div class="nk-wrap">
         <Menu />
-        <nuxt style="margin-top:5em" />
+        <nuxt style="margin-top:7em" />
         <Footer />
         <CookieControl locale="es" />
     </div>

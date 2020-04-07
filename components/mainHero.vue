@@ -8,9 +8,13 @@
                             <h1>Rescue app</h1>
                             <h2>Tu red de ayudas</h2>
                             <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios para la lucha contra el COVID-19</p>
-
-                            <b-button class="d-md-none" block squared to="/participar">Participar</b-button>
-                            <b-button class="d-none d-md-inline" squared size="lg" to="/participar">Participar</b-button>
+                            <p>
+                                <b-button class="d-md-none" block squared to="/participar">Participar</b-button>
+                                <b-button class="d-none d-md-inline" squared size="lg" to="/participar">Participar</b-button>
+                            </p>
+                            <p class="mt-4">
+                                <iframe class="data" src="https://datastudio.google.com/embed/reporting/7bc90df8-23a4-420f-8175-ac8862d9e05b/page/hUWLB" frameborder="0" style="border:0"></iframe>
+                            </p>
                         </div>
                     </div>
                 </b-col>
@@ -25,3 +29,14 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+.data {
+    width: 100%;
+    height: 100px;
+    max-width: 330px;
+    max-height: 100px;
+    pointer-events: none;
+    overflow: scroll;
+}
+</style>

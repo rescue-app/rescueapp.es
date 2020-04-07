@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <b-row v-for="(chunk, index) in team" :key="`logosChunkTeam${index}`">
             <b-col v-for="(logo) in chunk" :key="logo.filename" class="d-flex align-items-center justify-content-center">
                 <a :href="logo.website" target="_blank">

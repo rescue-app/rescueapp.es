@@ -51,6 +51,7 @@ module.exports = {
     */
     modules: [
         'bootstrap-vue/nuxt',
+        '@nuxtjs/pwa',
         ['nuxt-cookie-control', {
             controlButton: false,
             colors: {
@@ -77,7 +78,10 @@ module.exports = {
         ** You can extend webpack config here
         */
         extend (config, ctx) {
-        }
+        },
+        parallel: true,
+        hardSource: true,
+        cache: true
     },
     cookies: {
         necessary: [
@@ -94,5 +98,21 @@ module.exports = {
                 cookies: ['_ga', '_gat', '_gid']
             }
         ]
+    },
+    pwa: {
+        manifest: {
+            name: 'Rescue App',
+            lang: 'es',
+            short_name: 'rescueapp',
+            display: 'standalone',
+            theme_color: '#6c9169'
+        },
+        icon: {
+            iconSrc: '[srcDir]/[staticDir]/icon.png',
+            iconFileName: 'favicon.png',
+        },
+        workbox: {
+            dev: true // or use a global variable to track the current NODE_ENV, etc to determine dev mode
+        }
     }
 }

@@ -14,7 +14,7 @@
                 <h6 class="text-center">Partners</h6>
             </b-col>
         </b-row>
-        <b-row v-for="(chunk, index) in partners" :key="`logosChunkPartners${index}`">>
+        <b-row v-for="(chunk, index) in partners" :key="`logosChunkPartners${index}`">
             <b-col v-for="(logo) in chunk" :key="logo.filename" class="d-flex align-items-center">
                 <a :href="logo.website" target="_blank">
                     <img :src="require(`@/assets/images/partners/${logo.filename}`)" :alt="logo.name" :title="logo.name" class="img-responsive p-1">

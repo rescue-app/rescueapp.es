@@ -4,7 +4,7 @@ on:
     branches:
       - production
 jobs:
-  eslint:
+  s3:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

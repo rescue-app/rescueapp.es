@@ -1,6 +1,6 @@
 <template>
     <div class="nk-wrap">
-        <Menu />
+        <Navbar />
         <nuxt style="margin-top:7em" />
         <Footer />
         <CookieControl locale="es" />
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import Menu from '@/components/menu'
+import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 export default {
     components: {
-        Menu,
+        Navbar,
         Footer
     }
 }

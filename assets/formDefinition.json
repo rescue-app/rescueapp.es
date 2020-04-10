@@ -1,0 +1,17 @@
+[
+  {
+    "step": 1,
+    "options": [
+      {
+        "Ofrezco": {
+          "next": 5
+        }
+      },
+      {
+        "Necesito": {
+          "next": 2
+        }
+      }
+    ]
+  }
+]

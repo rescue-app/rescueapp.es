@@ -56,6 +56,46 @@ export default {
         formDefinition: [],
         currentStepInfo: {},
         formData: {
+			Tipo__c: null,
+			Oferta_1__c: null,
+			Cantidad_oferta_1__c: null,
+			Otros_oferta_1__c: null,
+			Descripcion_oferta_1__c: null,
+			Otra_oferta_1__c: null,
+			Oferta_2__c: null,
+			Otros_oferta_2__c: null,
+			Cantidad_oferta_2__c: null,
+			Descripcion_oferta_2__c: null,
+			Otra_oferta_2__c: null,
+			Oferta_3__c: null,
+			Otros_oferta_3__c: null,
+			Cantidad_oferta_3__c: null,
+			Descripcion_oferta_3__c: null,
+			Otra_oferta_3__c: null,
+			Quien_eres_1__c: null,
+			Nombre_de_empresa__c: null,
+			Persona_de_contacto__c: null,
+			Telefono__c: null,
+			Email__c: null,
+			Ciudad__c: null,
+			Cdigo_postal__c: null,
+			Direccion__c: null,
+			Unirte__c: null,
+			Necesidad_1__c: null,
+			Otros_1__c: null,
+			Cantidad_1__c: null,
+			Descripcion_1__c: null,
+			Otra_necesidad_1__c: null,
+			Necesidad_2__c: null,
+			Otros_2__c: null,
+			Cantidad_2__c: null,
+			Descripcion_2__c: null,
+			Otra_necesidad_2__c: null,
+			Necesidad_3__c: null,
+			Otros_3__c: null,
+			Cantidad_3__c: null,
+			Descripcion_3__c: null,
+			Otra_necesidad_3__c: null,
 
         }
 	}),
@@ -85,8 +125,24 @@ export default {
 			this.goToStep(option.next);
         },
         submitForm() {
-			//TODO
-        }
+			return;
+
+			let jsnAuthResponse = fetch("https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9wEVwV0C9ejCCh0zY_0PN_gyc4yX8CRvov1jfcSXqjIMYlb67v6i1oVPTjH.9Rhc8lRbpaxvVRT4FjOpg&client_secret=264491B8AA0CC4066707EFEFDF76386D7B393B7991D40D75CE325A63CE9D7D03&username=dani@rescueapp.es&password=Corona2020", {
+				'method' : 'post'
+			});
+			let jsnAuth = JSON.parse(jsnAuthResponse);
+
+			fetch('https://rescueapp.my.salesforce.com/services/data/v20.0/sobjects/typeform__c/', {
+				method: 'post',
+				headers: {
+					"Authorization" : "Bearer " + jsnAuth.access_token,
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(this.formData)
+			})
+            .then(res=>res.json())
+            .then(res => console.log(res));
+		}
     }
 }
 </script>

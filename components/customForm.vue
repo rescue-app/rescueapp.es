@@ -39,8 +39,8 @@
         </transition-group>
 
         <div>
-            <b-button variant="outline-primary" v-if="step > 1" @click="goToStep(step - 1)"> < </b-button>
-            <b-button variant="outline-primary" v-if="step < stepsNumber" @click="goToStep(step + 1)"> > </b-button>
+            <b-button variant="outline-primary" v-if="step > 1 && step !== -1" @click="goToStep(step - 1)"> < </b-button>
+            <b-button variant="outline-primary" v-if="step < stepsNumber && step !== -1" @click="goToStep(step + 1)"> > </b-button>
         </div>
 
     </div>

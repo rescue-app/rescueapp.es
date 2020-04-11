@@ -40,17 +40,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-    .ds-wrapper {
-        max-height: 100px;
-        overflow: hidden;
-    }
-    .data {
-        width: 100%;
-        height: 100%;
-        max-width: 330px;
-        pointer-events: none;
-        overflow: scroll;
-    }
-</style>

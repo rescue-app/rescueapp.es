@@ -1,17 +1,190 @@
 [
   {
     "step": 1,
+    "text": "Ofreces o necesitas algo?",
+    "input": "button",
     "options": [
       {
-        "Ofrezco": {
-          "next": 5
-        }
+        "text": "Ofrezco",
+        "next": 13
       },
       {
-        "Necesito": {
-          "next": 2
-        }
+        "text": "Necesito",
+        "next": 2
+      }
+    ]
+  },
+  {
+    "step": 2,
+    "text": "¿Qué necesitas?",
+    "input": "select",
+    "options": [
+      "Alimentación",
+      "Batas",
+      "Gafas",
+      "Gel desinfectante",
+      "Guantes",
+      "Mascarillas",
+      "Materiales (textil, pvc...)",
+      "Mensajería",
+      "Otros",
+      "Pantallas faciales",
+      "Psicologo",
+      "Respiradores",
+      "Otros"
+    ],
+    "next": 3
+  },
+  {
+    "step": 3,
+    "text": "Cantidad",
+    "input": "number",
+    "next": 4
+  },
+  {
+    "step": 4,
+    "text": "Breve explicación o descripción de esta petición",
+    "input": "text",
+    "next": 5
+  },
+  {
+    "step": 5,
+    "text": "¿Quieres añadir otra necesidad?",
+    "input": "button",
+    "options": [
+      {
+        "text": "Si",
+        "next": 2
+      },
+      {
+        "text": "No",
+        "next": 6
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "text": "¿Quién eres?",
+    "input": "select",
+    "options": [
+      "Centro Hospitalario",
+      "Residencia de Mayores",
+      "Particular que necesita asistencia",
+      "Otro"
+    ],
+    "next": 7
+  },
+  {
+    "step": 7,
+    "text": "Persona de contacto",
+    "input": "text",
+    "next": 8
+  },
+  {
+    "step": 8,
+    "text": "Télefono",
+    "input": "number",
+    "next": 9
+  },
+  {
+    "step": 9,
+    "text": "Email",
+    "input": "email",
+    "next": 10
+  },
+  {
+    "step": 10,
+    "text": "Ciudad",
+    "input": "text",
+    "next": 11
+  },
+  {
+    "step": 11,
+    "text": "Código postal",
+    "input": "text",
+    "next": 12
+  },
+  {
+    "step": 12,
+    "text": "Calle y número",
+    "input": "text",
+    "next": 25
+  },
+  {
+    "step": 13,
+    "text": "¿Qué ofreces?",
+    "input": "select",
+    "options": [
+      "Alimentación",
+      "Batas",
+      "Gafas",
+      "Gel desinfectante",
+      "Guantes",
+      "Mascarillas",
+      "Materiales (textil, pvc...)",
+      "Mensajería",
+      "Otros",
+      "Pantallas faciales",
+      "Psicologo",
+      "Respiradores",
+      "Otros"
+    ],
+    "next": 14
+  },
+  {
+    "step": 14,
+    "text": "Cantidad",
+    "input": "number",
+    "next": 15
+  },
+  {
+    "step": 15,
+    "text": "Breve explicación o descripción de esta oferta",
+    "input": "text",
+    "next": 16
+  },
+  {
+    "step": 16,
+    "text": "¿Quieres ofrecer otro recurso?",
+    "input": "button",
+    "options": [
+      {
+        "text": "Si",
+        "next": 13
+      },
+      {
+        "text": "No",
+        "next": 17
+      }
+    ]
+  },
+  {
+    "step": 17,
+    "text": "¿Quién eres?",
+    "input": "select",
+    "options": [
+      "Empresa",
+      "Universidad",
+      "Asociación",
+      "Particular",
+      "Otro"
+    ],
+    "next": 7
+  },
+  {
+    "step": 25,
+    "text": "quieres unirte al equipo de Rescue App y ayudarnos a escalar el proyecto?",
+    "input": "button",
+    "options": [
+      {
+        "text": "Si",
+        "next": -1
+      },
+      {
+        "text": "No",
+        "next": -1
       }
     ]
   }
 ]
+

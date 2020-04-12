@@ -3,6 +3,7 @@
     "step": 1,
     "text": "Ofreces o necesitas algo?",
     "input": "button",
+    "id": "Tipo__c",
     "options": [
       {
         "text": "Ofrezco",
@@ -17,6 +18,7 @@
   {
     "step": 2,
     "text": "¿Qué necesitas?",
+    "id": "Necesidad_1__c",
     "input": "select",
     "options": [
       "Alimentación",
@@ -38,19 +40,24 @@
   {
     "step": 3,
     "text": "Cantidad",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "number",
+    "id": "Cantidad_1__c",
     "next": 4
   },
   {
     "step": 4,
     "text": "Breve explicación o descripción de esta petición",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
+    "id": "Descripcion_1__c",
     "next": 5
   },
   {
     "step": 5,
     "text": "¿Quieres añadir otra necesidad?",
     "input": "button",
+    "id": "Otra_necesidad_1__c",
     "options": [
       {
         "text": "Si",
@@ -65,7 +72,9 @@
   {
     "step": 6,
     "text": "¿Quién eres?",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "select",
+    "id": "Quien_eres_1__c",
     "options": [
       "Centro Hospitalario",
       "Residencia de Mayores",
@@ -77,43 +86,56 @@
   {
     "step": 7,
     "text": "Persona de contacto",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
+    "id": "Persona_de_contacto__c",
     "next": 8
   },
   {
     "step": 8,
     "text": "Télefono",
+    "placeholder": "612345678",
     "input": "number",
+    "id": "Telefono__c",
     "next": 9
   },
   {
     "step": 9,
     "text": "Email",
+    "placeholder": "alguien@ejemplo.com",
     "input": "email",
+    "id": "Email__c",
     "next": 10
   },
   {
     "step": 10,
     "text": "Ciudad",
+    "placeholder": "Escribe o selecciona una opción",
     "input": "text",
+    "id": "Ciudad__c",
     "next": 11
   },
   {
     "step": 11,
     "text": "Código postal",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
+    "id": "Cdigo_postal__c",
     "next": 12
   },
   {
     "step": 12,
     "text": "Calle y número",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
+    "id": "Direccion__c",
     "next": 25
   },
   {
     "step": 13,
     "text": "¿Qué ofreces?",
     "input": "select",
+    "id": "Oferta_1__c",
     "options": [
       "Alimentación",
       "Batas",
@@ -134,19 +156,24 @@
   {
     "step": 14,
     "text": "Cantidad",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "number",
+    "id": "Cantidad_oferta_1__c",
     "next": 15
   },
   {
     "step": 15,
     "text": "Breve explicación o descripción de esta oferta",
+    "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
+    "id": "Descripcion_oferta_1__c",
     "next": 16
   },
   {
     "step": 16,
     "text": "¿Quieres ofrecer otro recurso?",
     "input": "button",
+    "id": "Otra_oferta_1__c",
     "options": [
       {
         "text": "Si",
@@ -162,6 +189,7 @@
     "step": 17,
     "text": "¿Quién eres?",
     "input": "select",
+    "id": "Quien_eres_1__c",
     "options": [
       "Empresa",
       "Universidad",
@@ -175,6 +203,7 @@
     "step": 25,
     "text": "quieres unirte al equipo de Rescue App y ayudarnos a escalar el proyecto?",
     "input": "button",
+    "id": "Unirte__c",
     "options": [
       {
         "text": "Si",

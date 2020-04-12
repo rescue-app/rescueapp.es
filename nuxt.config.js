@@ -15,7 +15,6 @@ module.exports = {
             { hid: 'og_title', property: 'og:title', content: 'Rescueapp' },
             { hid: 'og_description', property: 'og:description', content: 'Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios' },
             { hid: 'og_url', property: 'og:url', content: 'https://rescueapp.es' },
-            { hid: 'og_description', property: 'og:description', content: 'Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

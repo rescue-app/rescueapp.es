@@ -136,6 +136,13 @@ export default {
         addstepProps () {
             for (let i = 0; i < this.formDefinition.length; i++) {
                 if (this.formDefinition[i].step === this.step) {
+                    if (this.formDefinition[i].condition) {
+                        const condition = this.formDefinition[i].condition
+                        if (this.formData[condition.id] !== condition.value) {
+                            this.goToStep(this.step + 1)
+                            break
+                        }
+                    }
                     this.stepProps = this.formDefinition[i]
                 }
             }

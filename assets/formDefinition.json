@@ -51,6 +51,10 @@
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
     "id": "Descripcion_1__c",
+    "condition": {
+      "id": "Necesidad_1__c",
+      "value" : "Otros"
+    },
     "next": 5
   },
   {
@@ -223,6 +227,10 @@
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
     "id": "Descripcion_oferta_1__c",
+    "condition": {
+      "id": "Oferta_1__c",
+      "value" : "Otros"
+    },
     "next": 16
   },
   {

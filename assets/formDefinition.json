@@ -19,6 +19,7 @@
     "step": 2,
     "text": "¿Qué necesitas?",
     "id": "Necesidad_1__c",
+    "placeholder": "Escribe o selecciona aquí tu respuesta...",
     "input": "text",
     "options": [
       "Alimentación",
@@ -29,11 +30,9 @@
       "Mascarillas",
       "Materiales (textil, pvc...)",
       "Mensajería",
-      "Otros",
       "Pantallas faciales",
       "Psicologo",
-      "Respiradores",
-      "Otros"
+      "Respiradores"
     ],
     "next": 3
   },
@@ -51,11 +50,7 @@
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
     "id": "Descripcion_1__c",
-    "condition": {
-      "id": "Necesidad_1__c",
-      "value" : "Otros"
-    },
-    "next": 5
+    "next": 18
   },
   {
     "step": 5,
@@ -194,22 +189,21 @@
   {
     "step": 13,
     "text": "¿Qué ofreces?",
+    "placeholder": "Escribe o selecciona aquí tu respuesta...",
     "input": "text",
     "id": "Oferta_1__c",
     "options": [
       "Alimentación",
       "Batas",
+      "Donaciones Económicas (€)",
       "Gafas",
       "Gel desinfectante",
       "Guantes",
       "Mascarillas",
       "Materiales (textil, pvc...)",
       "Mensajería",
-      "Otros",
       "Pantallas faciales",
-      "Psicologo",
-      "Respiradores",
-      "Otros"
+      "Respiradores"
     ],
     "next": 14
   },
@@ -227,10 +221,6 @@
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
     "id": "Descripcion_oferta_1__c",
-    "condition": {
-      "id": "Oferta_1__c",
-      "value" : "Otros"
-    },
     "next": 16
   },
   {
@@ -262,6 +252,16 @@
       "Otro"
     ],
     "next": 7
+  },
+  {
+    "step": 18,
+    "input": "none",
+    "message": "<div color=\"#060606\" class=\"text___Text-sc-1t2ribu-0-div qkjXy\"><span data-qa=\"block-title deep-purple-block-title\" class=\"text___Text-sc-1t2ribu-0-span vwAES\">Si está atravesando una situación complicada, el Colegio Oficial de Psicología de Madrid ha puesto en marcha un nuevo Servicio de Atención Psicológica ante el Coronavirus<br><br>Interesados, por favor llamar al <strong>91 700 79 88</strong><br><br><em>*Destinado tanto a personas que estén contagiadas y que estén hospitalizadas o pasando la enfermedad aislados en su domicilio, como a trabajadores de cualquier ámbito que se vean afectados, o simplemente a personas que estén atravesando situaciones de estrés o ansiedad por el aislamiento domiciliario.</em> </span></div>",
+    "condition": {
+      "id": "Necesidad_1__c",
+      "value" : "Psicologo"
+    },
+    "next": 5
   },
   {
     "step": 25,

@@ -26,7 +26,12 @@
 
                 <b-input :key="'email' + step" type="email" v-if="isEmailInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <b-button class="accept-button" v-if="stepProps.input !== 'button' && stepProps.input !== 'select'" @click="storeStepInfo(stepProps)">Aceptar</b-button>
+                <b-button class="accept-button" v-if="shouldDisplayAcceptButton()" @click="storeStepInfo(stepProps)">Aceptar</b-button>
+
+                <div v-if="isNoneInput()">
+                    <div v-html="stepProps.message"></div>
+                    <b-button class="accept-button" v-if="isNoneInput()" @click="goToStep(stepProps.next)">Continuar</b-button>
+                </div>
             </div>
 
             <div v-else :key="'thanks-wrapper'">
@@ -116,6 +121,12 @@ export default {
         isEmailInput () {
             return this.stepProps.input === 'email'
         },
+        isNoneInput () {
+            return this.stepProps.input === 'none'
+        },
+        shouldDisplayAcceptButton () {
+            return this.isTextInput() || this.isNumberInput() || this.isEmailInput()
+        },
         getInputOptions () {
             if (this.stepProps.input !== 'button') {
                 return []
@@ -137,7 +148,7 @@ export default {
                     if (this.formDefinition[i].condition) {
                         const condition = this.formDefinition[i].condition
                         if (this.formData[condition.id] !== condition.value) {
-                            this.goToStep(this.step + 1)
+                            this.goToStep(this.formDefinition[i].next)
                             break
                         }
                     }
@@ -232,6 +243,7 @@ export default {
 
     .accept-button, .accept-button:hover, .accept-button:focus {
         position: relative;
+        display: block;
         font-family: inherit;
         font-weight: 700;
         cursor: pointer;

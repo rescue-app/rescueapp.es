@@ -18,7 +18,11 @@
                     <option v-for="option in stepProps.options" :value="option" :key="stepProps.id + option">{{ option }}</option>
                 </b-select>
 
-                <b-input :key="'input' + step" type="text" v-if="isTextInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
+                <b-input :key="'input' + step" type="text" :list="stepProps.id" v-if="isTextInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
+
+                <datalist :id="stepProps.id">
+                    <option v-for="option in stepProps.options" :key="option">{{ option }}</option>
+                </datalist>
 
                 <b-input :key="'number' + step" type="number" v-if="isNumberInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 

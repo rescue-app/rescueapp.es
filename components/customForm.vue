@@ -5,6 +5,7 @@
                 <h6 :key="'text' + step">{{ stepProps.text }}</h6>
 
                 <b-button :key="'button' + step + option.text"
+                          class="option-button"
                           v-for="option in getInputOptions()"
                           @click="storeOptionInfo(option)"
                 >
@@ -188,7 +189,7 @@ export default {
         padding: 2rem;
     }
 
-    .form-wrapper button:not(.btn-navigate) {
+    .option-button {
         margin: 1rem;
     }
 
@@ -229,12 +230,12 @@ export default {
         border-left: 1px solid grey;
     }
 
-    .accept-button {
+    .accept-button, .accept-button:hover, .accept-button:focus {
         position: relative;
         font-family: inherit;
         font-weight: 700;
         cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 3px 12px 0;
         min-height: 40px;
         background-color: rgb(79, 169, 179);
         color: rgb(1, 2, 2);

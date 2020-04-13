@@ -1,9 +1,6 @@
 <template>
     <div class="form-wrapper">
         <transition-group name="fade">
-            <!--To be deleted when it is done-->
-            <h5 :key="'step' + step">{{ step }}</h5>
-
             <div v-if="step !== -1" :key="'form-wrapper'">
                 <h6 :key="'text' + step">{{ stepProps.text }}</h6>
 
@@ -28,7 +25,7 @@
 
                 <b-input :key="'email' + step" type="email" v-if="isEmailInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <b-button v-if="stepProps.input !== 'button' && stepProps.input !== 'select'" @click="storeStepInfo(stepProps)">Aceptar</b-button>
+                <b-button class="accept-button" v-if="stepProps.input !== 'button' && stepProps.input !== 'select'" @click="storeStepInfo(stepProps)">Aceptar</b-button>
             </div>
 
             <div v-else :key="'thanks-wrapper'">
@@ -230,6 +227,26 @@ export default {
         border-radius: 0 4px 4px 0;
         transform: translateX(-5px);
         border-left: 1px solid grey;
+    }
+
+    .accept-button {
+        position: relative;
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+        min-height: 40px;
+        background-color: rgb(79, 169, 179);
+        color: rgb(1, 2, 2);
+        transition: background-color 0.2s ease 0s, color 0.2s ease 0s, border-color 0.2s ease 0s, opacity 0.2s ease 0s;
+        outline: none;
+        border-width: 1px;
+        border-style: solid;
+        border-image: initial;
+        margin: 1rem 0;
+        padding: 6px 14px;
+        border-color: transparent;
+        border-radius: 4px;
     }
 
     .navigation-wrapper {

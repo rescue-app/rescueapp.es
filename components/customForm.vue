@@ -20,8 +20,8 @@
 
                 <b-input :key="'input' + step" type="text" :list="stepProps.id" v-if="isTextInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <datalist :id="stepProps.id">
-                    <option v-for="option in stepProps.options" :key="option">{{ option }}</option>
+                <datalist :id="stepProps.id" v-if="isTextInput()">
+                    <option v-for="option in stepProps.options" :key="stepProps.id + option">{{ option }}</option>
                 </datalist>
 
                 <b-input :key="'number' + step" type="number" v-if="isNumberInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
@@ -138,6 +138,9 @@ export default {
                 if (this.formDefinition[i].step === this.step) {
                     if (this.formDefinition[i].condition) {
                         const condition = this.formDefinition[i].condition
+                        console.log(condition)
+                        console.log(this.formData[condition.id])
+                        console.log(condition.value)
                         if (this.formData[condition.id] !== condition.value) {
                             this.goToStep(this.step + 1)
                             break

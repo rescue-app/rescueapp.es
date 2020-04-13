@@ -5,7 +5,7 @@
             <h5 :key="'step' + step">{{ step }}</h5>
 
             <div v-if="step !== -1" :key="'form-wrapper'">
-                <h6 :key="'text' + step">{{ currentStepInfo.text }}</h6>
+                <h6 :key="'text' + step">{{ stepProps.text }}</h6>
 
                 <b-button :key="'button' + step + option.text"
                           v-for="option in getInputOptions()"
@@ -14,17 +14,17 @@
                     {{ option.text }}
                 </b-button>
 
-                <b-select :key="'select' + step" v-if="currentStepInfo.input === 'select'" @change="storeStepInfo(currentStepInfo)" :ref="currentStepInfo.id">
-                    <option v-for="option in currentStepInfo.options" :value="option" :key="currentStepInfo.id + option">{{ option }}</option>
+                <b-select :key="'select' + step" v-if="stepProps.input === 'select'" @change="storeStepInfo(stepProps)" :ref="stepProps.id">
+                    <option v-for="option in stepProps.options" :value="option" :key="stepProps.id + option">{{ option }}</option>
                 </b-select>
 
-                <b-input :key="'input' + step" type="text" v-if="isTextInput()" :ref="currentStepInfo.id" :placeholder="currentStepInfo.placeholder"></b-input>
+                <b-input :key="'input' + step" type="text" v-if="isTextInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <b-input :key="'number' + step" type="number" v-if="isNumberInput()" :ref="currentStepInfo.id" :placeholder="currentStepInfo.placeholder"></b-input>
+                <b-input :key="'number' + step" type="number" v-if="isNumberInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <b-input :key="'email' + step" type="email" v-if="isEmailInput()" :ref="currentStepInfo.id" :placeholder="currentStepInfo.placeholder"></b-input>
+                <b-input :key="'email' + step" type="email" v-if="isEmailInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
-                <b-button v-if="currentStepInfo.input !== 'button' && currentStepInfo.input !== 'select'" @click="storeStepInfo(currentStepInfo)">Aceptar</b-button>
+                <b-button v-if="stepProps.input !== 'button' && stepProps.input !== 'select'" @click="storeStepInfo(stepProps)">Aceptar</b-button>
             </div>
 
             <div v-else :key="'thanks-wrapper'">
@@ -54,7 +54,7 @@ export default {
         step: 1,
         stepsNumber: 1,
         formDefinition: [],
-        currentStepInfo: {},
+        stepProps: {},
         formData: {
             Tipo__c: null,
             Oferta_1__c: null,
@@ -102,24 +102,24 @@ export default {
     mounted () {
         this.formDefinition = formDefinition
         this.stepsNumber = formDefinition.length
-        this.addCurrentStepInfo()
+        this.addstepProps()
     },
     methods: {
         isTextInput () {
-            return this.currentStepInfo.input === 'text'
+            return this.stepProps.input === 'text'
         },
         isNumberInput () {
-            return this.currentStepInfo.input === 'number'
+            return this.stepProps.input === 'number'
         },
         isEmailInput () {
-            return this.currentStepInfo.input === 'email'
+            return this.stepProps.input === 'email'
         },
         getInputOptions () {
-            if (this.currentStepInfo.input !== 'button') {
+            if (this.stepProps.input !== 'button') {
                 return []
             }
 
-            return this.currentStepInfo.options
+            return this.stepProps.options
         },
         goToStep (step) {
             if (step === -1) {
@@ -127,22 +127,22 @@ export default {
             }
 
             this.step = step
-            this.addCurrentStepInfo()
+            this.addstepProps()
         },
-        addCurrentStepInfo () {
+        addstepProps () {
             for (let i = 0; i < this.formDefinition.length; i++) {
                 if (this.formDefinition[i].step === this.step) {
-                    this.currentStepInfo = this.formDefinition[i]
+                    this.stepProps = this.formDefinition[i]
                 }
             }
         },
         storeOptionInfo (option) {
-            this.formData[this.currentStepInfo.id] = option.text
+            this.formData[this.stepProps.id] = option.text
             this.goToStep(option.next)
         },
         storeStepInfo () {
-            this.formData[this.currentStepInfo.id] = this.$refs[this.currentStepInfo.id].localValue
-            this.goToStep(this.currentStepInfo.next)
+            this.formData[this.stepProps.id] = this.$refs[this.stepProps.id].localValue
+            this.goToStep(this.stepProps.next)
         },
         submitForm () {
             // TODO uncomment to do the real submit

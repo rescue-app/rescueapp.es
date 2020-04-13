@@ -138,9 +138,6 @@ export default {
                 if (this.formDefinition[i].step === this.step) {
                     if (this.formDefinition[i].condition) {
                         const condition = this.formDefinition[i].condition
-                        console.log(condition)
-                        console.log(this.formData[condition.id])
-                        console.log(condition.value)
                         if (this.formData[condition.id] !== condition.value) {
                             this.goToStep(this.step + 1)
                             break

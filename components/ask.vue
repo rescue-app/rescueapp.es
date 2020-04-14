@@ -20,12 +20,16 @@
         <!-- Valid object -->
         <div class="col" v-if="!loading && success === undefined">
             <div v-if="element === false" class="alert alert-danger" role="alert">
-                Lo sentimos, no encontramos esta oferta :(
+                Lo sentimos, no encontramos este elemento :(
             </div>
             <div v-if="element !== false" class="text-block">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h4>{{ element.type }} <small>{{ element.details }}. {{ element.other }}<br />({{ element.reference }})</small></h4>
+                        <h5>
+                            {{ element.quantity }}x {{ category }}
+                            <br v-if="element.details" /><small>{{ element.details }}</small>
+                        </h5>
+                        <span class="badge badge-secondary">Referencia: <strong>{{ element.reference }}</strong></span>
                     </div>
                 </div>
 
@@ -68,6 +72,12 @@
                         <div class="col-md-3 mb-3">
                             <label for="postalCode">Código Postal</label>
                             <input v-model="request.postalCode" type="text" class="form-control" id="postalCode" placeholder="Código postal" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <label for="details">Notas</label>
+                            <textarea v-model="request.details" class="form-control" id="details" rows="3" maxlength="230" placeholder="Si necesitas indicar alguna observación puedes hacerlo aquí"></textarea>
                         </div>
                     </div>
                     <div class="form-group form-check">
@@ -127,6 +137,11 @@ export default {
             loading: true,
             validChallenge: false,
             success: undefined
+        }
+    },
+    computed: {
+        category () {
+            return this.element.type === 'Otros' ? this.element.other : this.element.type
         }
     },
     methods: {

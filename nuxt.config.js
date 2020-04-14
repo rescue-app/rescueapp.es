@@ -52,6 +52,8 @@ module.exports = {
         'bootstrap-vue/nuxt',
         '@nuxtjs/pwa',
         'nuxt-typeform',
+        '@nuxt/http',
+        '@nuxtjs/recaptcha',
         ['nuxt-cookie-control', {
             controlButton: false,
             colors: {
@@ -114,5 +116,11 @@ module.exports = {
         workbox: {
             dev: false
         }
+    },
+    recaptcha: {
+        hideBadge: false,
+        siteKey: '6Ld3-egUAAAAAFQzBDcoq9OBnjusBOwV8vNKnl7J',
+        version: 2,
+        size: 'normal'
     }
 }

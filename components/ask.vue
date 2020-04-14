@@ -63,7 +63,7 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="street">Dirección</label>
-                            <input v-model="request.street" type="text" class="form-control" id="street" placeholder="Dirección postal" required>
+                            <input v-model="request.street" type="text" class="form-control" id="street" placeholder="Calle, número, piso..." required>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="city">Ciudad</label>

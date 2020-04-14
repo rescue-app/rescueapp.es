@@ -30,6 +30,7 @@
 
                 <div v-if="isNoneInput()">
                     <div v-html="stepProps.message"></div>
+                    <img src="@/assets/images/psicologos.png" v-if="stepProps.name === 'psicologo'" />
                     <b-button class="accept-button" v-if="isNoneInput()" @click="goToStep(stepProps.next)">Continuar</b-button>
                 </div>
             </div>
@@ -103,7 +104,6 @@ export default {
             Cantidad_3__c: null,
             Descripcion_3__c: null,
             Otra_necesidad_3__c: null
-
         }
     }),
     mounted () {
@@ -165,24 +165,45 @@ export default {
             this.goToStep(this.stepProps.next)
         },
         submitForm () {
-            // TODO uncomment to do the real submit
-            // console.log(this.formData)
+            const stock = {
+                quantity: this.formData.Cantidad_oferta_1__c,
+                type: this.formData.Tipo__c === 'Ofrezco' ? 'offer' : 'need',
+                details: this.formData.Descripcion_oferta_1__c,
+                other: null
+            }
 
-            // const jsnAuthResponse = fetch('https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9wEVwV0C9ejCCh0zY_0PN_gyc4yX8CRvov1jfcSXqjIMYlb67v6i1oVPTjH.9Rhc8lRbpaxvVRT4FjOpg&client_secret=264491B8AA0CC4066707EFEFDF76386D7B393B7991D40D75CE325A63CE9D7D03&username=dani@rescueapp.es&password=Corona2020', {
-            //     method: 'post'
-            // })
-            // const jsnAuth = JSON.parse(jsnAuthResponse)
-            //
-            // fetch('https://rescueapp.my.salesforce.com/services/data/v20.0/sobjects/typeform__c/', {
-            //     method: 'post',
-            //     headers: {
-            //         Authorization: 'Bearer ' + jsnAuth.access_token,
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify(this.formData)
-            // })
-            //     .then(res => res.json())
-            //     .then(res => console.log(res))
+            const data = {
+                name: this.formData.Persona_de_contacto__c,
+                email: this.formData.Email__c,
+                account: this.formData.Persona_de_contacto__c,
+                city: this.formData.Ciudad__c,
+                join: this.formData.Unirte__c === 'Si',
+                phone: this.formData.Telefono__c,
+                postalCode: this.formData.Cdigo_postal__c,
+                street: this.formData.Direccion__c,
+                contactType: this.formData.Quien_eres_1__c,
+                challenge: 'to-be-set-by-recaptcha',
+                stocks: [
+                    stock
+                ]
+            }
+
+            fetch(
+                'https://api.rescueapp.es/request?test=1',
+                {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then((res) => { res.json(); console.log(res) })
+                .catch((error) => {
+                    console.error('Error:', error)
+                })
+                .then((response) => {
+                    console.log('Success:', response)
+                })
         }
     }
 }

@@ -13,6 +13,7 @@
                 </b-button>
 
                 <b-input :key="'input' + stepProps.input + step"
+                         :list="stepProps.id"
                          :type="stepProps.input"
                          :value="formData[stepProps.id]"
                          v-if="isNumberInput() || isEmailInput() || isTextInput()"

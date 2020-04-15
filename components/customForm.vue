@@ -179,7 +179,6 @@ export default {
         storeStepInfo () {
             this.submittedField = true
             const isValid = this.$refs[this.stepProps.id].checkValidity()
-            console.log(this.$refs[this.stepProps.id].validity)
 
             if (isValid) {
                 this.formData[this.stepProps.id] = this.$refs[this.stepProps.id].localValue
@@ -191,7 +190,8 @@ export default {
 
             return {
                 quantity: isOffer ? this.formData.Cantidad_oferta_1__c : this.formData.Cantidad_1__c,
-                type: this.formData.Tipo__c === 'Ofrezco' ? 'offer' : 'need',
+                isOffer,
+                type: isOffer ? this.formData.Oferta_1__c : this.formData.Necesidad_1__c,
                 details: isOffer ? this.formData.Descripcion_oferta_1__c : this.formData.Descripcion_1__c,
                 other: null
             }

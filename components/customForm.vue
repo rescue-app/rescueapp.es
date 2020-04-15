@@ -1,7 +1,7 @@
 <template>
     <div class="form-wrapper">
         <transition-group name="fade">
-            <div v-if="step !== -1" :key="'form-wrapper'">
+            <div v-if="step !== -1" :key="'form-wrapper'" :class="{'submitted': submittedField}">
                 <h5 class="step-title" :key="'text' + step">{{ stepProps.text }}</h5>
 
                 <b-button :key="'button' + step + option.text"
@@ -12,7 +12,7 @@
                     {{ option.text }}
                 </b-button>
 
-                <b-input :key="stepProps.input + step"
+                <b-input :key="'input' + stepProps.input + step"
                          :type="stepProps.input"
                          :value="formData[stepProps.id]"
                          v-if="isNumberInput() || isEmailInput() || isTextInput()"
@@ -23,7 +23,7 @@
                 >
                 </b-input>
 
-                <datalist :id="stepProps.id" v-if="isTextInput()">
+                <datalist :id="stepProps.id" v-if="isTextInput()" :key="'list' + step">
                     <option v-for="option in stepProps.options" :key="stepProps.id + option">{{ option }}</option>
                 </datalist>
 
@@ -75,6 +75,7 @@ export default {
         stepsNumber: 1,
         formDefinition: [],
         stepProps: {},
+        submittedField: false,
         formData: {
             Tipo__c: null,
             Oferta_1__c: null,
@@ -147,6 +148,8 @@ export default {
             return this.stepProps.options
         },
         goToStep (step) {
+            this.submittedField = false
+
             if (step === -1) {
                 this.submitForm()
             }
@@ -173,8 +176,14 @@ export default {
             this.goToStep(option.next)
         },
         storeStepInfo () {
-            this.formData[this.stepProps.id] = this.$refs[this.stepProps.id].localValue
-            this.goToStep(this.stepProps.next)
+            this.submittedField = true
+            const isValid = this.$refs[this.stepProps.id].checkValidity()
+            console.log(this.$refs[this.stepProps.id].validity)
+
+            if (isValid) {
+                this.formData[this.stepProps.id] = this.$refs[this.stepProps.id].localValue
+                this.goToStep(this.stepProps.next)
+            }
         },
         getStock () {
             const isOffer = this.formData.Tipo__c === 'Ofrezco'
@@ -236,6 +245,10 @@ export default {
 
     .form-wrapper {
         padding: 2rem;
+    }
+
+    .submitted input:invalid {
+        border-color: red;
     }
 
     .step-title {

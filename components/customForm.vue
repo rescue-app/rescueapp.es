@@ -12,19 +12,20 @@
                     {{ option.text }}
                 </b-button>
 
-                <b-select :key="'select' + step" v-if="stepProps.input === 'select'" @change="storeStepInfo(stepProps)" :ref="stepProps.id">
-                    <option v-for="option in stepProps.options" :value="option" :key="stepProps.id + option">{{ option }}</option>
-                </b-select>
-
-                <b-input :key="'input' + step" type="text" :list="stepProps.id" v-if="isTextInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
+                <b-input :key="stepProps.input + step"
+                         :type="stepProps.input"
+                         :value="formData[stepProps.id]"
+                         v-if="isNumberInput() || isEmailInput() || isTextInput()"
+                         :ref="stepProps.id"
+                         :placeholder="stepProps.placeholder"
+                         @keyup.enter="storeStepInfo(stepProps)"
+                         required
+                >
+                </b-input>
 
                 <datalist :id="stepProps.id" v-if="isTextInput()">
                     <option v-for="option in stepProps.options" :key="stepProps.id + option">{{ option }}</option>
                 </datalist>
-
-                <b-input :key="'number' + step" type="number" v-if="isNumberInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
-
-                <b-input :key="'email' + step" type="email" v-if="isEmailInput()" :ref="stepProps.id" :placeholder="stepProps.placeholder" @keyup.enter="storeStepInfo(stepProps)"></b-input>
 
                 <b-button class="form-button accept-button" v-if="shouldDisplayAcceptButton()" @click="storeStepInfo(stepProps)">Aceptar</b-button>
 

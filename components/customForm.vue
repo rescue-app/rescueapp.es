@@ -48,7 +48,7 @@
                 <b-button class="form-button accept-button" v-if="isNoneInput()" @click="goToStep(stepProps.next)">Continuar</b-button>
             </div>
 
-            <div v-else :key="'thanks-wrapper'" class="step-title">
+            <div v-else :key="'thanks-wrapper'" class="step-title thanks-wrapper">
                 ¡Muchas gracias !
 
                 Te contactaremos lo antes posible para verificar y validar tu solicitud.
@@ -84,16 +84,6 @@ export default {
             Otros_oferta_1__c: null,
             Descripcion_oferta_1__c: null,
             Otra_oferta_1__c: null,
-            Oferta_2__c: null,
-            Otros_oferta_2__c: null,
-            Cantidad_oferta_2__c: null,
-            Descripcion_oferta_2__c: null,
-            Otra_oferta_2__c: null,
-            Oferta_3__c: null,
-            Otros_oferta_3__c: null,
-            Cantidad_oferta_3__c: null,
-            Descripcion_oferta_3__c: null,
-            Otra_oferta_3__c: null,
             Quien_eres_1__c: null,
             Nombre_de_empresa__c: null,
             Persona_de_contacto__c: null,
@@ -107,17 +97,7 @@ export default {
             Otros_1__c: null,
             Cantidad_1__c: null,
             Descripcion_1__c: null,
-            Otra_necesidad_1__c: null,
-            Necesidad_2__c: null,
-            Otros_2__c: null,
-            Cantidad_2__c: null,
-            Descripcion_2__c: null,
-            Otra_necesidad_2__c: null,
-            Necesidad_3__c: null,
-            Otros_3__c: null,
-            Cantidad_3__c: null,
-            Descripcion_3__c: null,
-            Otra_necesidad_3__c: null
+            Otra_necesidad_1__c: null
         }
     }),
     mounted () {
@@ -179,6 +159,7 @@ export default {
         storeStepInfo () {
             this.submittedField = true
             const isValid = this.$refs[this.stepProps.id].checkValidity()
+            this.$refs[this.stepProps.id].reportValidity()
 
             if (isValid) {
                 this.formData[this.stepProps.id] = this.$refs[this.stepProps.id].localValue
@@ -254,6 +235,11 @@ export default {
 
     .step-title {
         color: rgb(79, 169, 179);
+    }
+
+    .thanks-wrapper {
+        font-size: 1.5rem;
+        font-weight: 800;
     }
 
     .option-button {

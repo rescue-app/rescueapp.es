@@ -3,7 +3,7 @@
     "step": 1,
     "text": "Ofreces o necesitas algo?",
     "input": "button",
-    "id": "Tipo__c",
+    "id": "tipo",
     "options": [
       {
         "text": "Ofrezco",
@@ -18,7 +18,7 @@
   {
     "step": 2,
     "text": "¿Qué necesitas?",
-    "id": "Necesidad_1__c",
+    "id": "need_type",
     "placeholder": "Escribe o selecciona aquí tu respuesta...",
     "input": "text",
     "options": [
@@ -41,7 +41,7 @@
     "text": "Cantidad",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "number",
-    "id": "Cantidad_1__c",
+    "id": "need_quantity",
     "next": 4
   },
   {
@@ -49,7 +49,7 @@
     "text": "Breve explicación o descripción de esta petición",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Descripcion_1__c",
+    "id": "need_description",
     "next": 18
   },
   {
@@ -73,7 +73,7 @@
     "text": "¿Quién eres?",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Quien_eres_1__c",
+    "id": "contactType",
     "options": [
       "Centro Hospitalario",
       "Residencia de Mayores",
@@ -87,7 +87,7 @@
     "text": "Persona de contacto",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Persona_de_contacto__c",
+    "id": "name",
     "next": 8
   },
   {
@@ -95,7 +95,7 @@
     "text": "Télefono",
     "placeholder": "612345678",
     "input": "number",
-    "id": "Telefono__c",
+    "id": "phone",
     "next": 9
   },
   {
@@ -103,7 +103,7 @@
     "text": "Email",
     "placeholder": "alguien@ejemplo.com",
     "input": "email",
-    "id": "Email__c",
+    "id": "email",
     "next": 10
   },
   {
@@ -167,7 +167,7 @@
       "Soria",
       "Teruel"
     ],
-    "id": "Ciudad__c",
+    "id": "city",
     "next": 11
   },
   {
@@ -175,7 +175,7 @@
     "text": "Código postal",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Cdigo_postal__c",
+    "id": "postalCode",
     "next": 12
   },
   {
@@ -183,7 +183,7 @@
     "text": "Calle y número",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Direccion__c",
+    "id": "street",
     "next": 25
   },
   {
@@ -191,7 +191,7 @@
     "text": "¿Qué ofreces?",
     "placeholder": "Escribe o selecciona aquí tu respuesta...",
     "input": "text",
-    "id": "Oferta_1__c",
+    "id": "offer_type",
     "options": [
       "Alimentación",
       "Batas",
@@ -212,7 +212,7 @@
     "text": "Cantidad",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "number",
-    "id": "Cantidad_oferta_1__c",
+    "id": "offer_quantity",
     "next": 15
   },
   {
@@ -220,7 +220,7 @@
     "text": "Breve explicación o descripción de esta oferta",
     "placeholder": "Escribe aquí tu respuesta...",
     "input": "text",
-    "id": "Descripcion_oferta_1__c",
+    "id": "offer_description",
     "next": 19
   },
   {
@@ -243,7 +243,7 @@
     "step": 17,
     "text": "¿Quién eres?",
     "input": "text",
-    "id": "Quien_eres_1__c",
+    "id": "contactType",
     "options": [
       "Empresa",
       "Universidad",
@@ -258,7 +258,7 @@
     "input": "none",
     "name": "psicologo",
     "condition": {
-      "id": "Necesidad_1__c",
+      "id": "need_type",
       "value" : "Psicologo"
     },
     "next": 5
@@ -277,7 +277,7 @@
     "step": 25,
     "text": "quieres unirte al equipo de Rescue App y ayudarnos a escalar el proyecto?",
     "input": "button",
-    "id": "Unirte__c",
+    "id": "join",
     "options": [
       {
         "text": "Si",

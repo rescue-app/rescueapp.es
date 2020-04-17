@@ -78,26 +78,23 @@ export default {
         stepProps: {},
         submittedField: false,
         formData: {
-            Tipo__c: null,
-            Oferta_1__c: null,
-            Cantidad_oferta_1__c: null,
-            Otros_oferta_1__c: null,
-            Descripcion_oferta_1__c: null,
-            Otra_oferta_1__c: null,
-            Quien_eres_1__c: null,
-            Nombre_de_empresa__c: null,
-            Persona_de_contacto__c: null,
-            Telefono__c: null,
-            Email__c: null,
-            Ciudad__c: null,
-            Cdigo_postal__c: null,
-            Direccion__c: null,
-            Unirte__c: null,
-            Necesidad_1__c: null,
-            Otros_1__c: null,
-            Cantidad_1__c: null,
-            Descripcion_1__c: null,
-            Otra_necesidad_1__c: null
+            tipo: null,
+            offer_type: null,
+            offer_quantity: null,
+            offer_description: null,
+            offers: [],
+            contactType: null,
+            name: null,
+            phone: null,
+            email: null,
+            city: null,
+            postalCode: null,
+            street: null,
+            join: null,
+            needs: [],
+            need_type: null,
+            need_quantity: null,
+            need_description: null
         }
     }),
     mounted () {
@@ -135,6 +132,36 @@ export default {
                 this.submitForm()
             }
 
+            // Si pone otra necesidad
+            if (this.step === 5) {
+                this.formData.needs.push({
+                    quantity: this.formData.need_quantity,
+                    isOffer: false,
+                    type: this.formData.need_type,
+                    details: this.formData.need_description,
+                    other: null
+                })
+
+                this.formData.need_quantity = null
+                this.formData.need_type = null
+                this.formData.need_description = null
+            }
+
+            // Si pone otra ofrecimiento
+            if (this.step === 16) {
+                this.formData.offers.push({
+                    quantity: this.formData.offer_quantity,
+                    isOffer: true,
+                    type: this.formData.offer_type,
+                    details: this.formData.offer_description,
+                    other: null
+                })
+
+                this.formData.offer_quantity = null
+                this.formData.offer_type = null
+                this.formData.offer_description = null
+            }
+
             this.step = step
             this.addstepProps()
         },
@@ -167,33 +194,21 @@ export default {
             }
         },
         getStock () {
-            const isOffer = this.formData.Tipo__c === 'Ofrezco'
-
-            return {
-                quantity: isOffer ? this.formData.Cantidad_oferta_1__c : this.formData.Cantidad_1__c,
-                isOffer,
-                type: isOffer ? this.formData.Oferta_1__c : this.formData.Necesidad_1__c,
-                details: isOffer ? this.formData.Descripcion_oferta_1__c : this.formData.Descripcion_1__c,
-                other: null
-            }
+            return this.formData.tipo === 'Ofrezco' ? this.formData.offers : this.formData.needs
         },
         submitForm () {
-            const stock = this.getStock()
-
             const data = {
-                name: this.formData.Persona_de_contacto__c,
-                email: this.formData.Email__c,
-                account: this.formData.Persona_de_contacto__c,
-                city: this.formData.Ciudad__c,
-                join: this.formData.Unirte__c === 'Si',
-                phone: this.formData.Telefono__c,
-                postalCode: this.formData.Cdigo_postal__c,
-                street: this.formData.Direccion__c,
-                contactType: this.formData.Quien_eres_1__c,
+                name: this.formData.name,
+                email: this.formData.email,
+                account: this.formData.name,
+                city: this.formData.city,
+                join: this.formData.join === 'Si',
+                phone: this.formData.phone,
+                postalCode: this.formData.postalCode,
+                street: this.formData.street,
+                contactType: this.formData.contactType,
                 challenge: 'to-be-set-by-recaptcha',
-                stocks: [
-                    stock
-                ]
+                stocks: this.getStock()
             }
 
             fetch(
@@ -205,13 +220,15 @@ export default {
                         'Content-Type': 'application/json'
                     }
                 })
-                .then((res) => { res.json(); console.log(res) })
-                .catch((error) => {
-                    console.error('Error:', error)
-                })
-                .then((response) => {
-                    console.log('Success:', response)
-                })
+                .then(response => response.json().then(text => ({
+                    json: text,
+                    meta: response
+                }))
+                    .then(({ json }) => {
+                        if (json && json.error) {
+                            console.log(json.details[0])
+                        }
+                    }))
         }
     }
 }

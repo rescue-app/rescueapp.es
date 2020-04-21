@@ -16,7 +16,11 @@
                          :list="stepProps.id"
                          :type="stepProps.input"
                          :value="formData[stepProps.id]"
-                         v-if="isNumberInput() || isEmailInput() || isTextInput()"
+                         :min="stepProps.min"
+                         :max="stepProps.max"
+                         :minlength="stepProps.minlength"
+                         :maxlength="stepProps.maxlength"
+                         v-if="isNumberInput() || isEmailInput() || isTextInput() || isTelInput()"
                          :ref="stepProps.id"
                          :placeholder="stepProps.placeholder"
                          @keyup.enter="storeStepInfo(stepProps)"
@@ -41,7 +45,7 @@
 
                 <div v-if="isNoneInput() && stepProps.name === 'donacion'">
                     <div>
-                        <h6 class="step-title">Puedes realizar tu donación en https://www.contraelcoronavirus.org/helpup</h6>
+                        <h6 class="step-title">Puedes realizar tu donación en <a target="_blank" href="https://www.contraelcoronavirus.org/helpup">https://www.contraelcoronavirus.org/helpup</a></h6>
                     </div>
                     <img src="@/assets/images/donacion.jpeg" alt="donaciones" />
                 </div>
@@ -112,11 +116,14 @@ export default {
         isEmailInput () {
             return this.stepProps.input === 'email'
         },
+        isTelInput () {
+            return this.stepProps.input === 'tel'
+        },
         isNoneInput () {
             return this.stepProps.input === 'none'
         },
         shouldDisplayAcceptButton () {
-            return this.isTextInput() || this.isNumberInput() || this.isEmailInput()
+            return this.isTextInput() || this.isNumberInput() || this.isEmailInput() || this.isTelInput()
         },
         getInputOptions () {
             if (this.stepProps.input !== 'button') {

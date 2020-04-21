@@ -94,7 +94,9 @@
     "step": 8,
     "text": "Télefono",
     "placeholder": "612345678",
-    "input": "number",
+    "input": "tel",
+    "minlength": 9,
+    "maxlength": 9,
     "id": "phone",
     "next": 9
   },
@@ -174,7 +176,9 @@
     "step": 11,
     "text": "Código postal",
     "placeholder": "Escribe aquí tu respuesta...",
-    "input": "text",
+    "input": "number",
+    "max": 99999,
+    "min": 10000,
     "id": "postalCode",
     "next": 12
   },
@@ -268,7 +272,7 @@
     "input": "none",
     "name": "donacion",
     "condition": {
-      "id": "Oferta_1__c",
+      "id": "offer_type",
       "value" : "Donaciones Económicas (€)"
     },
     "next": 16

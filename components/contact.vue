@@ -7,7 +7,7 @@
             </div>
             <div class="section-content">
                 <div class="row g-gs justify-content-center">
-                    <div class="col-md-9 col-lg-3">
+                    <div class="col-md-9 col-lg-4">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="mailto:info@rescueapp.es">
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-lg-3">
+                    <div class="col-md-9 col-lg-4">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="https://www.instagram.com/rescue_app/">
@@ -33,7 +33,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-lg-3">
+                    <div class="col-md-9 col-lg-4">
+                        <div class="blog-item">
+                            <div class="text-center pt-4">
+                                <a href="https://www.facebook.com/rescue_app-107990140849400/">
+                                    <img width="100px" height="100px" src="~/assets/images/social-badges/facebook.png" alt="Logo Facebook">
+                                </a>
+                            </div>
+                            <div class="blog-text">
+                                <h5 class="title"><a href="https://www.instagram.com/rescue_app/">Instagram</a></h5>
+                                <p>Últimas noticias, videos e imagenes de cómo se desarrolla el proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-4">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="https://www.linkedin.com/company/rescue-app/">
@@ -46,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9 col-lg-3">
+                    <div class="col-md-9 col-lg-4">
                         <div class="blog-item">
                             <div class="text-center pt-4">
                                 <a href="https://www.twitter.com/rescueapp_es">

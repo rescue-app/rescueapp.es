@@ -177,7 +177,10 @@ export default {
                 if (this.formDefinition[i].step === this.step) {
                     if (this.formDefinition[i].condition) {
                         const condition = this.formDefinition[i].condition
-                        if (this.formData[condition.id] !== condition.value) {
+                        if (!condition.type && this.formData[condition.id] !== condition.value) {
+                            this.goToStep(this.formDefinition[i].next)
+                            break
+                        } else if (condition.type === 'different' && this.formData[condition.id] === condition.value) {
                             this.goToStep(this.formDefinition[i].next)
                             break
                         }

@@ -80,7 +80,7 @@
       "Particular que necesita asistencia",
       "Otro"
     ],
-    "next": 7
+    "next": 20
   },
   {
     "step": 7,
@@ -255,7 +255,7 @@
       "Particular",
       "Otro"
     ],
-    "next": 7
+    "next": 20
   },
   {
     "step": 18,
@@ -276,6 +276,32 @@
       "value" : "Donaciones Económicas (€)"
     },
     "next": 16
+  },
+  {
+    "step": 20,
+    "input": "text",
+    "text": "Nombre de la empresa, asociación, universidad u otros",
+    "placeholder": "Escribe aquí tu respuesta...",
+    "id": "nombreAssociacion",
+    "condition": {
+      "type": "different",
+      "id": "contactType",
+      "value" : "Particular que necesita asistencia"
+    },
+    "next": 7
+  },
+  {
+    "step": 20,
+    "input": "text",
+    "text": "Nombre de la empresa, asociación, universidad u otros",
+    "placeholder": "Escribe aquí tu respuesta...",
+    "id": "nombreAssociacion",
+    "condition": {
+      "type": "different",
+      "id": "contactType",
+      "value" : "Particular"
+    },
+    "next": 7
   },
   {
     "step": 25,

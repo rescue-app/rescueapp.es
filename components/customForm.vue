@@ -204,7 +204,7 @@ export default {
             }
         },
         getStock () {
-            return this.formData.tipo === 'Ofrezco' ? this.formData.offers : this.formData.needs
+            return this.formData.tipo === 'Ofrezco' ? this.formData.offers.slice(0, 3) : this.formData.needs.slice(0, 3)
         },
         submitForm () {
             const data = {

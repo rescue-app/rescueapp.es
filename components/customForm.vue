@@ -88,6 +88,7 @@ export default {
             offer_description: null,
             offers: [],
             contactType: null,
+            account: null,
             name: null,
             phone: null,
             email: null,
@@ -154,7 +155,7 @@ export default {
                 this.formData.need_description = null
             }
 
-            // Si pone otra ofrecimiento
+            // Si pone otro ofrecimiento
             if (this.step === 16) {
                 this.formData.offers.push({
                     quantity: this.formData.offer_quantity,
@@ -210,7 +211,7 @@ export default {
             const data = {
                 name: this.formData.name,
                 email: this.formData.email,
-                account: this.formData.name,
+                account: this.formData.account,
                 city: this.formData.city,
                 join: this.formData.join === 'Si',
                 phone: this.formData.phone,

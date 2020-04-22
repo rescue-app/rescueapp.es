@@ -282,7 +282,7 @@
     "input": "text",
     "text": "Nombre de la empresa, asociación, universidad u otros",
     "placeholder": "Escribe aquí tu respuesta...",
-    "id": "nombreAssociacion",
+    "id": "account",
     "condition": {
       "type": "different",
       "id": "contactType",
@@ -295,7 +295,7 @@
     "input": "text",
     "text": "Nombre de la empresa, asociación, universidad u otros",
     "placeholder": "Escribe aquí tu respuesta...",
-    "id": "nombreAssociacion",
+    "id": "account",
     "condition": {
       "type": "different",
       "id": "contactType",

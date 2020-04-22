@@ -41,7 +41,7 @@
                                 </a>
                             </div>
                             <div class="blog-text">
-                                <h5 class="title"><a href="https://www.instagram.com/rescue_app/">Instagram</a></h5>
+                                <h5 class="title"><a href="https://www.facebook.com/rescue_app-107990140849400/">Facebook</a></h5>
                                 <p>Últimas noticias, videos e imagenes de cómo se desarrolla el proyecto.</p>
                             </div>
                         </div>

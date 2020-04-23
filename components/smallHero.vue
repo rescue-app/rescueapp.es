@@ -6,7 +6,7 @@
                     <div class="nk-banner-block">
                         <div class="content mt-2 mt-sm-0">
                             <h1>Rescue app</h1>
-                            <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios</p>
+                            <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios </p>
                         </div>
                     </div>
                 </b-col>

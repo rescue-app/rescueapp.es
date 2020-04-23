@@ -7,7 +7,7 @@
                         <div class="content mt-4 mt-sm-0">
                             <h1>Rescue app</h1>
                             <h2>Tu red de ayudas</h2>
-                            <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios para la lucha contra el COVID-19</p>
+                            <p>Centralización y emparejamiento de la oferta y la demanda de recursos sanitarios</p>
                             <p>
                                 <b-button class="d-md-none" block squared to="/participar">Participar</b-button>
                                 <b-button class="d-none d-md-inline" squared size="lg" to="/participar">Participar</b-button>

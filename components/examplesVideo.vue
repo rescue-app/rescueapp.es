@@ -14,9 +14,7 @@
                         </div>
                     </div>
                     <div class="col-sm col-md-8 col-lg-4 text-center">
-                        <video width="285" height="415" autoplay muted loop>
-                            <source src="~/assets/videos/video.mp4" type="video/mp4">
-                        </video>
+                        <img width="285" height="415" src="~/assets/videos/video-explicativo.gif" alt="Video explicativo">
                     </div>
                 </div>
             </div>

@@ -176,9 +176,9 @@
     "step": 11,
     "text": "Código postal",
     "placeholder": "Escribe aquí tu respuesta...",
-    "input": "number",
-    "max": 99999,
-    "min": 10000,
+    "input": "tel",
+    "minlength": 5,
+    "maxlength": 5,
     "id": "postalCode",
     "next": 12
   },

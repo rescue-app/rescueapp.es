@@ -30,13 +30,10 @@
 
 <script>
 import SmallHero from '@/components/smallHero'
-// import CustomForm from '@/components/customForm'
-import Typeform from '@/components/typeform'
+
 export default {
     components: {
-        SmallHero,
-        // CustomForm,
-        Typeform
+        SmallHero
     },
     methods: {
         onSubmit () {

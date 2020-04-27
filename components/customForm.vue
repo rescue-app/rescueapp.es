@@ -223,7 +223,7 @@ export default {
             }
 
             fetch(
-                'https://api.rescueapp.es/request?test=1',
+                'https://api.rescueapp.es/request',
                 {
                     method: 'POST',
                     body: JSON.stringify(data),

@@ -341,4 +341,10 @@ export default {
         text-align: right;
         padding: 1.5rem;
     }
+
+    .form-control::placeholder {
+        color: lightgray;
+        font-style: italic;
+    }
+
 </style>

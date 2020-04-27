@@ -10,16 +10,16 @@
                             <h2 class="title">PARTICIPA</h2>
                             <p class="lead">En Rescue app, buscamos centralizar los recursos, <strong>creando un repositorio único de con la información sobre las necesidades de cada centro hospitalario, residencia de mayores y de asistencia a particulares.</strong></p>
                             <p>A continuación puedes participar en el proyecto, por favor sigue los pasos indicados y nos pondremos en contacto contigo lo antes posible para darte una solución</p>
-                            <custom-form></custom-form>
-                            <!--<Typeform-->
-                            <!--class="w-100 mb-3"-->
-                            <!--style="height: 700px"-->
-                            <!--:hide-headers="true"-->
-                            <!--:hide-footer="true"-->
-                            <!--:opacity="0"-->
-                            <!--:on-submit="onSubmit"-->
-                            <!--url="https://info548263.typeform.com/to/W2VwqF"-->
-                            <!--/>-->
+                            <!--<custom-form></custom-form>-->
+                            <Typeform
+                                class="w-100 mb-3"
+                                style="height: 700px"
+                                :hide-headers="true"
+                                :hide-footer="true"
+                                :opacity="0"
+                                :on-submit="onSubmit"
+                                url="https://info548263.typeform.com/to/W2VwqF"
+                            />
                         </div>
                     </div>
                 </div>
@@ -30,12 +30,13 @@
 
 <script>
 import SmallHero from '@/components/smallHero'
-import CustomForm from '@/components/customForm'
-// import Typeform from '@/components/typeform'
+// import CustomForm from '@/components/customForm'
+import Typeform from '@/components/typeform'
 export default {
     components: {
         SmallHero,
-        CustomForm
+        // CustomForm,
+        Typeform
     },
     methods: {
         onSubmit () {

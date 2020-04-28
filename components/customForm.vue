@@ -1,8 +1,10 @@
 <template>
     <div class="form-wrapper">
         <transition-group name="fade">
-            <div v-if="step !== -1" :key="'form-wrapper'" :class="{'submitted': submittedField}">
+            <div v-if="step !== -1 && !displayCaptcha" :key="'form-wrapper'" :class="{'submitted': submittedField}">
                 <h5 class="step-title" :key="'text' + step">{{ stepProps.text }}</h5>
+
+                <div class="error" v-if="stepProps.error">{{ stepProps.error }}</div>
 
                 <b-button :key="'button' + step + option.text"
                           class="form-button"
@@ -52,7 +54,7 @@
                 <b-button class="form-button accept-button" v-if="isNoneInput()" @click="goToStep(stepProps.next)">Continuar</b-button>
             </div>
 
-            <div v-else :key="'thanks-wrapper'" class="step-title thanks-wrapper">
+            <div v-else-if="!displayCaptcha && step === -1" :key="'thanks-wrapper'" class="step-title thanks-wrapper">
                 ¡Muchas gracias !
 
                 Te contactaremos lo antes posible para verificar y validar tu solicitud.
@@ -63,7 +65,9 @@
             </div>
         </transition-group>
 
-        <div class="navigation-wrapper">
+        <recaptcha v-if="displayCaptcha" class="mb-3" @error="onError" @success="onSuccess" @expired="onExpired" />
+
+        <div class="navigation-wrapper" v-if="!displayCaptcha">
             <b-button class="btn-navigate" variant="outline-primary" :disabled="step <= 1 || step === -1" @click="goToStep(step - 1)"> ▲ </b-button>
             <b-button class="btn-navigate" variant="outline-primary" :disabled="step >= stepsNumber || step === -1" @click="goToStep(step + 1)"> ▼ </b-button>
         </div>
@@ -81,6 +85,9 @@ export default {
         formDefinition: [],
         stepProps: {},
         submittedField: false,
+        displayCaptcha: false,
+        validChallenge: false,
+        challenge: undefined,
         formData: {
             tipo: null,
             offer_type: null,
@@ -137,7 +144,8 @@ export default {
             this.submittedField = false
 
             if (step === -1) {
-                this.submitForm()
+                this.displayCaptcha = true
+                return
             }
 
             // Si pone otra necesidad
@@ -172,6 +180,15 @@ export default {
 
             this.step = step
             this.addstepProps()
+        },
+        findStepById (stepId) {
+            for (let i = 0; i < this.formDefinition.length; i++) {
+                if (this.formDefinition[i].id === stepId) {
+                    return this.formDefinition[i]
+                }
+            }
+
+            return null
         },
         addstepProps () {
             for (let i = 0; i < this.formDefinition.length; i++) {
@@ -218,7 +235,7 @@ export default {
                 postalCode: this.formData.postalCode,
                 street: this.formData.street,
                 contactType: this.formData.contactType,
-                challenge: 'to-be-set-by-recaptcha',
+                challenge: this.challenge,
                 stocks: this.getStock()
             }
 
@@ -237,9 +254,35 @@ export default {
                 }))
                     .then(({ json }) => {
                         if (json && json.error) {
-                            console.log(json.details[0])
+                            const field = json.details[0].match(/"(.*?)"/)
+                            if (field !== 'challenge') {
+                                this.displayCaptcha = false
+                                const stepData = this.findStepById(field)
+                                this.goToStep(stepData.step)
+                                this.stepProps.error = json.error
+                            } else {
+                                this.goToStep(-1)
+                            }
+                        } else {
+                            this.displayCaptcha = false
+                            this.step = -1
+                            this.addstepProps()
                         }
                     }))
+        },
+        onSuccess (token) {
+            this.challenge = token
+            this.validChallenge = true
+            this.submitForm()
+        },
+        onExpired () {
+            this.challenge = undefined
+            this.validChallenge = false
+        },
+        onError (error) {
+            this.challenge = undefined
+            this.validChallenge = false
+            console.log(error)
         }
     }
 }
@@ -345,6 +388,10 @@ export default {
     .form-control::placeholder {
         color: lightgray;
         font-style: italic;
+    }
+
+    .error {
+        color: red;
     }
 
 </style>

@@ -257,7 +257,7 @@
       "Particular",
       "Otro"
     ],
-    "next": 20
+    "next": 21
   },
   {
     "step": 18,
@@ -293,7 +293,7 @@
     "next": 7
   },
   {
-    "step": 20,
+    "step": 21,
     "input": "text",
     "text": "Nombre de la empresa, asociación, universidad u otros",
     "placeholder": "Escribe aquí tu respuesta...",

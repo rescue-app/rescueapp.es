@@ -36,11 +36,11 @@
                 <form @submit.prevent="onSubmit">
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="name">Teléfono</label>
+                            <label for="name">Nombre<span class="text-danger">*</span></label>
                             <input v-model="request.name" type="text" class="form-control" id="name" placeholder="Nombre completo" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="contactType">¿Quien eres?</label>
+                            <label for="contactType">¿Quien eres?<span class="text-danger">*</span></label>
                             <select v-model="request.contactType" class="form-control" id="contactType" required>
                                 <option>Empresa</option>
                                 <option>Universidad</option>
@@ -52,25 +52,25 @@
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="email">E-mail</label>
+                            <label for="email">E-mail<span class="text-danger">*</span></label>
                             <input v-model="request.email" type="email" class="form-control" id="email" placeholder="Dirección de e-mail" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="phone">Teléfono</label>
+                            <label for="phone">Teléfono<span class="text-danger">*</span></label>
                             <input v-model="request.phone" type="text" class="form-control" id="phone" placeholder="Teléfono" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="street">Dirección</label>
+                            <label for="street">Dirección<span class="text-danger">*</span></label>
                             <input v-model="request.street" type="text" class="form-control" id="street" placeholder="Calle, número, piso..." required>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="city">Ciudad</label>
+                            <label for="city">Ciudad<span class="text-danger">*</span></label>
                             <input v-model="request.city" type="text" class="form-control" id="city" placeholder="Ciudad" required>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="postalCode">Código Postal</label>
+                            <label for="postalCode">Código Postal<span class="text-danger">*</span></label>
                             <input v-model="request.postalCode" type="text" class="form-control" id="postalCode" placeholder="Código postal" required>
                         </div>
                     </div>

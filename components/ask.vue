@@ -112,7 +112,7 @@ export default {
         }
     },
     async fetch () {
-        const requestUrl = `https://api.rescueapp.es/${this.type}/${this.reference}/${this.id}`
+        const requestUrl = `https://apidata.rescueapp.es/${this.type}/${this.reference}/${this.id}`
 
         try {
             if (!this.id || !this.reference || !this.type) {
@@ -146,7 +146,7 @@ export default {
     },
     methods: {
         async onSubmit () {
-            const requestUrl = 'https://api.rescueapp.es/ask'
+            const requestUrl = 'https://apidata.rescueapp.es/ask'
             this.loading = true
             try {
                 this.request.account = this.request.name

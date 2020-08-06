@@ -12,9 +12,9 @@
                                 <b-button class="d-md-none" block squared to="/participar">Participar</b-button>
                                 <b-button class="d-none d-md-inline" squared size="lg" to="/participar">Participar</b-button>
                             </p>
-                            <p class="mt-4 ds-wrapper">
+                            <!--<p class="mt-4 ds-wrapper">
                                 <iframe scrolling="no" class="data" src="https://datastudio.google.com/embed/reporting/7bc90df8-23a4-420f-8175-ac8862d9e05b/page/hUWLB" frameborder="0" style="border:0"></iframe>
-                            </p>
+                            </p>-->
                         </div>
                     </div>
                 </b-col>
